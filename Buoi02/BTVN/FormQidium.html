@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+
+    <style>
+        .header{
+            text-align: center;
+            justify-content: center;
+        }
+        .header h1{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 45px;
+        }
+        .Body_Page input{
+            border: 1px solid rgb(199, 199, 199);
+            width: 100%;
+            border-radius: 5px;
+            height: 40px;
+            margin-top: 5px;
+            margin-right: 65px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .Body_Page h3 {
+            font-family: 'Roboto', sans-serif;
+        }
+        .Body_Page button{
+            width: 100%;
+            height: 40px;
+            background-color: #7559FE;
+            color: white;
+            font-size: large;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 0 solid rgb(196, 195, 195);
+            padding: 0;
+        }
+        .ForgetPw{
+            float: right;
+            color: gray;
+            text-decoration: none;
+        }
+        .Form_Righ span{
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+        }
+        .Form_Right .btn{
+            --height: 44px;
+            background-color: #fff;
+            border: 1px solid #dce0e3;
+            border-radius: 5px;
+            display: inline-block;
+            height: var(--height);
+            line-height: var(--height);
+            padding-left: 16px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            padding-left: 0;
+            margin-left: 15px;
+            margin-right: -95px;
+            margin-bottom: 13px;
+        }
+
+        .SignUp{
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+
+        .SignUp a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+
+        .Footer_Page{
+            margin-top: 10px;
+        }
+
+        .Footer_item{
+            margin-left: 27px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div style=" box-sizing: border-box; border-radius: 10px; box-shadow: 2px 2px 2px 2px rgba(148, 148, 148, 0.6); width: 600px; line-height: 1.4rem;">
+        <div>
+            <div class="header">
+                <img src="../BTVN/img/Logo-Qidium.svg" alt="" style="margin-bottom: 10px;">
+                <h1 style="color: #7559FE; margin-top: 10px;">Qidium</h1>
+                <div class="Contet_header" style="font-family: 'Roboto', sans-serif;">
+                    <h3 style="margin: 0;">Mạng hỏi đáp và chia sẻ tri thức</h3>
+                    <p class="content" style="margin: 0 125px; font-size: 17px; color: rgb(77, 75, 75);">Cùng kết nối với +12.460 thành viên và mentor trong nhiều lĩnh vực ngành nghề</p>
+                </div>
+            </div>
+
+            <div class="Body_Page" style="justify-content: space-between;">
+                <div style="display: flex;">
+                   <div class="Form_Left" style="flex-basis: 50%;">
+                        <form action="" style="margin-left: 20px; border-right: 1px solid gray; padding-right: 45px;">
+                            <h3 style="margin: 0;">ID or Email</h3>
+                            <input type="email"  placeholder="Tên đăng nhập hoặc Email">
+                            <h3 style="margin: 0;">Password</h3>
+                            <input type="password" placeholder="Password"> <br>
+                            <button>Đăng Nhập</button>
+                            <a href="" class="ForgetPw">Quên mật khẩu?</a>
+                        </form>
+                   </div>
+
+                    <div class="Form_Right" style="flex-basis: 50%; margin-top: 18px">
+
+                        <div></div>
+
+                        <form action="" style=" margin-right: 35px;">
+                            <div class="btn">
+                                <img src="../BTVN/img/face_icon.svg" alt="" style="float: left;">
+                                <span style="color: rgb(122, 120, 120); font-family: 'Roboto', sans-serif;">Đăng nhập với Facebook</span>
+                            </div>
+                            <div class="btn">
+                                <img src="../BTVN/img/google_icon.svg" alt="" style="float: left; margin-top: 4px;">
+                                <span style="color: rgb(122, 120, 120); font-family: 'Roboto', sans-serif;">Đăng nhập với Google</span>
+                            </div>
+                        </form>
+                        <div class="SignUp" style="text-align: center; margin-left: 15px">
+                            <a href="">Đăng ký tài khoản bằng Email</a>
+                            <div class="Note">
+                                <span> Đăng nhập đồng nghĩa với việc bạn đòng ý với 
+                                <a href="">Điều kiện & Điều khoản</a> và đã đọc <a href="">Chính sách bảo mật</a>
+                                gồm <a href="">Bộ quy tắc cộng đồng</a> của chúng tôi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Footer_Page" style="display: flex; background-color: rgb(217 217 217);">
+                <div class="Footer_item">About</div>
+                <div class="Footer_item">Careers </div>
+                <div class="Footer_item">Privacy</div>
+                <div class="Footer_item">Terms</div>
+                <div class="Footer_item">Contact</div>
+                <div class="Footer_item">Languages</div>
+                <div class="Footer_item">Qidium 2022</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
