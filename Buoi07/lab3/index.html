@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        .element1{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(29, 124, 84);
+            /* border-radius: 50%; */
+            position: relative;
+            margin: 0;
+            animation-name: bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite, infinite;
+        }
+
+        .element2{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(104, 18, 82);
+            /* border-radius: 50%; */
+            position: relative;
+            margin: 0 ;
+            animation-name: bounce;
+            animation-duration: 4s;
+            animation-iteration-count: infinite, infinite;
+        }
+
+        .element3{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(228, 19, 19);
+            /* border-radius: 50%; */
+            position: relative;
+            margin: 0 ;
+            animation-name: bounce;
+            animation-duration: 6s;
+            animation-iteration-count: infinite, infinite;
+        }
+
+        @keyframes bounce {
+            from{
+                left: 0px;
+                
+            }
+            10%{
+                left: 50px;
+            }
+            20%{
+                left: 25%;
+            }
+            30%{
+                left: 100px;
+            }
+            40%{
+                left: 50px;
+            }
+            50%{
+                left: 200px;
+            }
+            60%{
+                left: 100px;
+            }
+            70%{
+                left: 250px;
+            }
+            80%{
+                left: 200px;
+            }
+            90%{
+                left: 300px;
+            }
+            to{
+                left: 350px;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="element1"></div>
+        <div class="element2"></div>
+        <div class="element3"></div>
+    </div>
+</body>
+</html>
