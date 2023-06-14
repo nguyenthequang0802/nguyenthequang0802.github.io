@@ -72,7 +72,7 @@ body{
     border-top: 1px solid black;
 }
 
-.image-background, .new-product, .last-content{
+.image-background, .new-product, .last-content, .container-footer{
     margin-left: 47px;
     margin-top: 15px;
     margin-right: 55px;
@@ -258,4 +258,46 @@ img{
 .last-content>.image-background{
     filter: brightness(0.5);
 }
+
+.footer{
+    background-color: black;
+}
+
+.head-footer{
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(254, 254, 254, 0.16);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+}
+
+.main-footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.nav-footer{
+    list-style: none;
+}
+
+.footer-item{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.feedback{
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+
+
 
