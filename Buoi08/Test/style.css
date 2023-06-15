@@ -302,6 +302,8 @@ img{
 .feedback{
     border: 1px solid;
     border-radius: 10px;
+    padding-bottom: 6px;
+    padding-top: 10px;
 }
 
 .nav-footer h5{
