@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findMax(a, b, c){
+            if(a>b){
+                if(a>c) return a;
+                else return c;
+            }else{
+                if(b>c) return b;
+                else return c;
+            }
+        }
+        console.log("MAX = ", findMax(9, 2, 4))
+    </script>
+</body>
+</html>

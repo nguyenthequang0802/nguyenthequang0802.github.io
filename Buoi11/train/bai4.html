@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kiemtraNamNhuan(year){
+            if((year%4===0 && year%100!=0) || year%400===0) console.log(year+" la nam nhuan");
+            else console.log(year + " khong la nam nhuan");
+        }
+
+        kiemtraNamNhuan(2020)
+    </script>
+</body>
+</html>

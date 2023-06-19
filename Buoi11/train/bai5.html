@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kiemtraTamGiac(a, b, c){
+  
+            if(a != 0 || b != 0 || c != 0){
+                if(a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a) console.log("la tam giac vuong")
+                else if(a == b || a ==c || b == c) console.log("La tam giac can")
+                else if(a == b == c) console.log("La tam giac deu")
+                else console.log("la tam giac thuong")
+            }
+            else console.log("Khong phai la tam giac")
+        }
+
+        kiemtraTamGiac(2,1,2)
+    </script>
+</body>
+</html>
