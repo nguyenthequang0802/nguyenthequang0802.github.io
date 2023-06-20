@@ -6,15 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <script> 
-        // Default Parameter
-        function sum(a = 10, b = 20){
-            return a+b;
+    <script>
+        function giaiPt(a, b){
+            if(a !== 0) console.log("x =",-1.0*b/a)
+            else console.log("Phuong trinh nhap vao khong hop le");
         }
 
-        console.log(sum(3,4));
-        console.log(sum(3)) // a = 3, b = 20
-        console.log(sum())
+        giaiPt(3, 0)
     </script>
 </body>
 </html>

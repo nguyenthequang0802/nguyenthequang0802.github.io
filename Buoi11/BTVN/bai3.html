@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function giaiPtBac2(a, b, c){
+            if(a === 0){
+                if(b === 0){
+                    if(c === 0){
+                    console.log("Phuong trinh co vo so nghiem")
+                    }else console.log("Phuong tirnh vo nghiem")
+                }else console.log("Phuong trinh co nghiem duy nhat la:", -1.0*c/b)
+            }
+            else{
+                delta = b**2 - 4*a*c;
+                if(delta < 0){
+                    console.log("Phuong trinh vo nghiem");
+                }
+                else if(delta === 0){
+                    console.log("Phuong tirnh co nghiem kep:", -b/2*a)
+                }
+                else{
+                    x1 = (-b+Math.sqrt(delta))/(2*a);
+                    x2 = (-b-Math.sqrt(delta))/(2*a);
+                    console.log(`Phuong trinh co hai nghiem la ${x1}, ${x2}`)
+                }
+            }
+        }
+
+        giaiPtBac2(1, -4, 4)
+    </script>
+</body>
+</html>
