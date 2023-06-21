@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateSum(startNum, endNum, divideNum){
+            let sum = 0;
+            for(let i = startNum; i<=endNum; i++){
+                if(i % divideNum === 0) sum += i;
+            }
+            return sum;
+        }
+        console.log(calculateSum(0, 100, 5));
+    </script>
+</body>
+</html>

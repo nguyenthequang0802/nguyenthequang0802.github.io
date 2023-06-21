@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function repeatString(str, numRepeat, join_character){
+            let New_str = "";
+            let i = 1;
+
+            while(i < numRepeat){
+                if (i > 1)
+                    New_str += join_character;
+                New_str += str;
+                i += 1;
+            }
+            return New_str;
+        }
+        console.log(repeatString("abc", 10, "-"))
+    </script>
+</body>
+</html>

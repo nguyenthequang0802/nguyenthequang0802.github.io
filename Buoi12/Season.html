@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Season(month){
+            let name = "";
+            switch(moth){
+                case 1:
+                case 2: 
+                case 3:{
+                    name = "Mùa Xuân";
+                    break;
+                }
+                case 4:
+                case 5: 
+                case 6:{
+                    name = "Mùa Hạ";
+                    break;
+                }
+                case 7:
+                case 8: 
+                case 9:{
+                    name = "Mùa Thu";
+                    break;
+                }
+                case 10:
+                case 11: 
+                case 12:{
+                    name = "Màu Đông"
+                }
+                default:
+                    name = "Invalid"
+                    break;
+            }
+            return name;
+        }
+        console.log(Season(1));
+    </script>
+</body>
+</html>
