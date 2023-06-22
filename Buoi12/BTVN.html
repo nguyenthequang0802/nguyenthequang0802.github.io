@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bai 01
+        function repeatString(string, numRepeat, join_character){
+            let ans = "";
+            for(let i = 1; i <= numRepeat; i++){
+                if(i > 1) ans += join_character;
+                ans += string;
+            }
+            return ans;
+        }
+        console.log(repeatString("a", 5, "+"));
+
+        function repeatString_While(string, numRepeat, join_character){
+            let ans = "";
+            let i = 1;
+            while(i <= numRepeat){
+                if(i > 1) ans += join_character;
+                ans += string;
+                i += 1;
+            }
+            return ans;
+        }
+        console.log(repeatString_While("b", 6, "-"));
+
+        // Bai 02
+        function calculateSum_For(startNum, endNum, divideNum){
+            let sum = 0;  
+            for(let i = startNum; i <= endNum; i++){
+                if(i % divideNum === 0) sum += i;
+            }
+            return sum;
+        }
+        console.log(calculateSum_For(0, 100, 5));
+
+        function calculateSum_While(startNum, endNum, divideNum){
+            let sum = 0;  
+            let i = startNum ;
+            while(i<=endNum){
+                if(i % divideNum === 0) sum += i;
+                i += 1;
+            }
+            return sum;
+        }
+        console.log(calculateSum_While(0, 100, 5));
+
+        // Bai 03
+        function calculateSphericalVolume(r){
+            let volume = 0;  
+            volume = (4/3)*Math.PI*Math.pow(r, 3);
+            return volume;
+        }
+        console.log(calculateSphericalVolume(5));
+
+        // Bai 04
+        function calculateSum_For(Num1, Num2){
+            let sum = 0;  
+            for(let i = Num1 + 1; i < Num2; i++){
+                sum += i;
+            }
+            return sum;
+        }
+        console.log(calculateSum_For(3, 8));
+
+        function calculateSum_While(Num1, Num2){
+            let sum = 0;  
+            let i = Num1 + 1;
+            while(i < Num2 ){
+                sum += i;
+                i++
+            }
+            return sum;
+        }
+        console.log(calculateSum_While(3, 8));
+
+        // Bai 05
+        function isPrime(num){
+            if(num <2){
+                return false;
+            }
+
+            for(let i = 2; i <= Math.sqrt(num); i++){
+                if(num % i === 0) return false;
+            }
+            return true;
+        }
+        console.log(isPrime(7));
+
+        // Bai 06
+        function calculateSumPrimeNumber_For(startNum, endNum){
+            let sum = 0;
+            for(let i = startNum; i <= endNum; i++){
+                if(isPrime(i)) sum += i;
+            }
+            return sum
+        }
+        console.log(calculateSumPrimeNumber_For(0,6));
+
+        function calculateSumPrimeNumber_While(startNum, endNum){
+            let sum = 0;
+            let i = startNum;
+            while(i<=endNum){
+                if(isPrime(i)) sum += i;
+                i++;
+            }
+            return sum;
+        }
+        console.log(calculateSumPrimeNumber_While(0,6));
+
+        // Bai 07 
+        function sumDivide_For(num){
+            let sum = 0;
+            for(let i = 0; i <= num; i++){
+                if(num % i ===0) sum += i;
+            }
+            return sum;
+        }
+        console.log(sumDivide_For(10));
+
+        function sumDivide_While(num){
+            let sum = 0;
+            let i = 0;
+            while(i <= num){
+                if(num % i ===0) sum += i;
+                i++;
+            }
+            return sum;
+        }
+        console.log(sumDivide_While(10))
+
+
+
+    </script>
+</body>
+</html>
