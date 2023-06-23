@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Bai 01
+        function calculateFactoria(num){
+            let sum = 1;
+            for(let i = num; i>0; i--){
+                sum = sum * i;
+            }
+            return sum;
+        }
+        console.log(calculateFactoria(5));
+
+        // Bai 02
+        function reverseString(str){
+            let newStr = "";
+            for(let i = str.length - 1; i >= 0; i--){
+                newStr += str[i];
+            }
+            return newStr;
+        }
+        console.log(reverseString("hello"));
+
+        // Bai 03
+
+        function translate(countryCode){
+            let str = "";
+            switch(countryCode){
+                case 'VN':
+                    str = "Xin Chao";
+                    break;
+                case 'EN':
+                    str = "Hello";
+                    break;
+                default: 
+                    str = "ERROR";
+                    break;
+            }
+            return str;
+            
+        }
+        console.log(translate('EN'));
+
+        // Bai 04
+        function subString(str ,num, appendSTr){
+            let newStr = "";
+            for(let i = 0; i < num; i++){
+                newStr += str[i];   
+            }
+            newStr += appendSTr
+            return newStr;
+        }
+        console.log(subString("xinchaocacbandenvoiTechmaster", 10, "..."));
+
+        // Bai 05
+        function printNumberWithColor(startNum, endNum){
+            for(let i = startNum; i <= endNum; i++){
+                if(i%2 === 0){
+                    document.write('<span style="color: blue;">'+ i +" "+'</span>');
+                } else{
+                    document.write('<span style="color: red;">'+ i +" "+'</span>');
+                }
+            }
+        }
+        console.log(printNumberWithColor(0,100));
+
+    </script>
+    
+</body>
+</html>
