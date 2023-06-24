@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bai 01
+        function checkStringExist(string, sub_string) {
+            let stringLength = string.length;
+            let sub_stringLength = sub_string.length;
+
+            if (sub_stringLength > stringLength) {
+                return false;
+            }
+
+  
+            for (let i = 0; i <= stringLength - sub_stringLength; i++) {
+                let match = true;
+
+                for (let j = 0; j < sub_stringLength; j++) {
+                    if (string[i + j] !== sub_string[j]) {
+                        match = false;
+                        break;
+                    }
+                }
+
+                if (match) {
+                    return true;
+                }
+            }
+
+                return false;
+        }
+            console.log(checkStringExist("I love you", "you")); 
+            console.log(checkStringExist("I love you", "hate"));  
+
+        // Bai 2
+        function shortenString(string, num_character, appendStr){
+            let newString = "";
+            for(let i = 0; i < num_character; i++){
+                newString += string[i];
+            }
+            newString += appendStr;
+            return newString;
+        }
+        console.log(shortenString("Xin chao cac ban", 8, "..."));
+
+        // Bai 3
+        function isSymmetricString(string){
+            let cleanedString = "";
+            for(let i = 0; i < string.length; i++){
+                if(string[i] !== " "){
+                    cleanedString += string[i].toLowerCase();
+                }
+            }
+
+            let left = 0;
+            let right = cleanedString.length - 1;
+
+            while(left < right){
+                if(cleanedString[left] !== cleanedString[right]){
+                    return flase;
+                }
+                left ++; 
+                right --;
+            }
+            return true;
+        }
+        console.log(isSymmetricString("Race car"));
+
+        // Bai 4
+        function arrangeNumber(num){
+            let arr = [];
+            let temp = num;
+            while (temp > 0){
+                let digit = temp % 10;
+                arr.push(digit);
+                temp = Math.floor(temp/10); 
+            }
+
+            for(let i = 0; i<arr.length-1; i++){
+                for(let j = i+1; j < arr.length; j++){
+                    if(arr[i] > arr[j]){
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+
+            let index = 0;
+            while(arr[index]  === 0){
+                index++;
+            }
+
+            let sortedNumber = 0;
+            for(let i = index; i < arr.length; i++){
+                sortedNumber = sortedNumber*10 + arr[i];
+            }
+            return sortedNumber;
+        }
+        console.log(arrangeNumber(53751));
+
+    </script>
+</body>
+</html>
