@@ -104,6 +104,42 @@
         }
         console.log(arrangeNumber(53751));
 
+        // Bai 5
+        function convertToSnakeCase(str) {
+            let result = "";
+            let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+            let uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let digits = "0123456789";
+            let isPreviousCharSpace = false;
+
+            for (let i = 0; i < str.length; i++) {
+                let currentChar = str[i];
+                let isCurrentCharSpace = currentChar === " ";
+
+                if (isCurrentCharSpace) {
+                    isPreviousCharSpace = true;
+                } else {
+                if (isPreviousCharSpace) {
+                    result += "_";
+                    isPreviousCharSpace = false;
+                }
+
+                if (lowercaseChars.includes(currentChar)) {
+                    result += currentChar;
+                } else if (uppercaseChars.includes(currentChar)) {
+                    result += "_" + lowercaseChars[uppercaseChars.indexOf(currentChar)];
+                } else if (digits.includes(currentChar)) {
+                    result += currentChar;
+                }
+                }
+            }
+
+            return result;
+        }
+
+        console.log(convertToSnakeCase("Hello world"));                
+
+
     </script>
 </body>
 </html>
