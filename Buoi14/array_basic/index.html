@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        console.log(arr)
+        // Khai báo array
+        let number = [];
+
+        // Gán giá trị cho các phần tử của array thông qua chỉ số
+        number[0] = 1;
+        number[1] = "Bùi Hiên";
+        number[2] = true;
+        console.log(number)
+
+        // Khai báo và khởi tạo giá trị cho array
+        const myArr = [1, 2, 3, 4, true, false, "Nguyễn Văn A"];
+        console.log(myArr)
+
+        myArr[1] = 10;
+        myArr[2] = 20;
+        console.log(myArr[myArr.length-1]);
+
+        myArr.push("abc");
+        myArr.splice(1, 2, 200, 300);
+        console.log(myArr);
+
+        let numbers = [4, 1, 5, 7, 2, 11, 23];
+        console.log(numbers.sort(function(a,b){return b-a}));
+
+        // foreach
+        let newArr = [];
+        numbers.forEach((value, index)=> {
+            if(value%2 !== 0){
+                newArr.unshift(value);
+            }
+        })
+        console.log(newArr);
+
+        // filter
+        let newArr1 = numbers.filter(value => value % 2 !== 0)
+        console.log(newArr1);
+    </script>
+</body>
+</html>

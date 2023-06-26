@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bai 1
+        function checkArrAsc(arr){
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] < arr[i-1]){
+                    return false;
+                }
+            }
+            return true;
+        }
+        let arr1 = [1, 2, 3, 6]
+        console.log(checkArrAsc(arr1));
+
+
+
+        // Bai 3
+        function checkEvenArrAsc(arr){
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] < arr[i-1] || arr[i] % 2 !== 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        let arr2 = [2, 3, 6]
+        console.log(checkEvenArrAsc(arr1));
+
+        // BTVN3 buoi12
+        function isSymmetricString(str){
+            // let StrArray = str.replace(" ", "").toLowerCase().split("");
+            // let length = StrArray.length;
+
+            // for(let i = 0; i < length/2; i++){
+            //     if(StrArray[i] !== StrArray[length-1-i]){
+            //         return false;
+            //     }
+            // }
+            // return true;
+            let newStr = str.toLowerCase().split(" ").join("");
+            let strReverse = newStr.split("").reverse().join("");
+            return newStr === strReverse;
+        }
+
+        console.log(isSymmetricString("Race car")); //true
+        console.log(isSymmetricString("hello")); //false
+
+        // BTVN4 buoi12
+        function getMinNumber(num){
+            let str = num.toString();
+            let arr = str.split("").sort();
+            if(arr[0] === '0'){
+                for(let i = 0; i<arr.length; i++){
+                    if(arr[i] !== '0'){
+                        arr[0] = arr[i];
+                        arr[i] = '0'; 
+                        break;
+                    }
+                }
+            }
+            return Number(arr.join(""));
+        }
+        console.log(getMinNumber(15370))
+
+    </script>
+</body>
+</html>
