@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bai 1
+        function checkElementExist(arr,num){
+            // let a = arr.indexOf(num);
+            // for(let i = 0; i <= arr.length-1; i++){
+            //     if(a === i) return true;
+            // }
+            // return false;
+            return arr.includes(num);
+        }
+        let arr = [1,2,3,4,5]
+        console.log(checkElementExist(arr , 5));
+
+        // Bai 2
+        function getElementGreater(arr, num){
+            return arr.filter(x => x>num)
+        }
+        console.log(getElementGreater([1,2,3,4,5], 5))
+
+        // Bai 3
+        function randomHexCode(){
+            let hexCode = "#"
+            let letters = '0123456789ABCDEF'
+            for(let i = 0; i < 6; i++){
+                 hexCode += letters[Math.floor(Math.random()*16)];
+            }
+            return hexCode;
+        }
+        console.log(randomHexCode())
+
+        // Bai 4
+        function randomRgbCode(){
+            let rgbCode = "rgb(";
+            let rgbValue = [];
+            for(let i = 0; i < 3; i++){
+                let randomCodeRGB = Math.floor(Math.random()*256);
+                rgbValue.push(randomCodeRGB);
+            }
+            rgbCode += rgbValue.join(', ');
+            rgbCode += ")";
+            return rgbCode;
+        }
+        console.log(randomRgbCode());
+
+        // Bai 5
+        function printNumber(arr){
+            let newArr = []
+            arr.forEach(value => {
+                if(value % 3 === 0)
+                    newArr.push(value);
+            })
+            return newArr.join(', ')
+        }
+        console.log(printNumber([1, 2, 3, 4, 5, 6]));
+    </script>
+</body>
+</html>

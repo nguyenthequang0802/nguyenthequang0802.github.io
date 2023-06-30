@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bai 1
+        function sortStudent(arr){
+            console.log((arr.sort()).reverse());
+        }
+        sortStudent(['Nam', 'Hoa', 'Tuan'])
+        
+        // Bai 2
+        function shuffle(arr){
+            for(let i = arr.length-1; i > 0; i--){
+                let j = Math.floor(Math.random()*(i+1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+        console.log(shuffle([1, 2, 3, 4, 5]));
+
+        // Bai 3
+        function symmetricDifference(arr1, arr2){
+            let diff1 = arr1.filter(ele => !arr2.includes(ele));
+            let diff2 = arr2.filter(ele => !arr1.includes(ele));
+             
+            return diff1.concat(diff2);
+        }
+        console.log(symmetricDifference([1, 2, 3], [1, 2, 4]));
+
+        // Bai 4
+        function union(arr1, arr2){
+            let diff1 = arr1.filter(ele => arr2.includes(ele));
+            // let diff2 = arr2.filter(ele => arr1.includes(ele));
+             
+            return diff1;
+        }
+        console.log(union([1, 2, 3, 4, 5], [2, 4, 6, 1]))
+    </script>
+</body>
+</html>
