@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const modulo2 = arr =>{
+            return arr.map(e => e%2);
+        }
+        console.log(modulo2([4, 2, 5, 6, 2, 7]))
+
+        function sum(arr) {
+            let sum = arr.reduce(function (total, elem) {
+                return total + elem;
+            }, 0);
+            return sum
+        }
+        console.log(sum([1, 2, 3]))
+
+        function upperCase(arr){
+            return arr.map((ele, index) =>  index%2 ==0 ? ele.toLowerCase():ele.toUpperCase());
+        }
+        console.log(upperCase(["apple", "banana", "orange"]));
+
+        // Bai 2
+        function checkPrime(num){
+            if(num <2){
+                return false;
+            }
+
+            for(let i = 2; i <= Math.sqrt(num); i++){
+                if(num % i === 0) return false;
+            }
+            return true;
+        }
+        function findPrime(arr){
+            return arr.filter(ele => checkPrime(ele) == true);
+        }
+        console.log(findPrime([1, 2, 3, 4, 5]))
+
+        // Bai 3
+        function createNewArr(arr){
+            return arr.filter(ele => ele.length%2 == 0);
+        }
+        console.log(createNewArr(["apple", "banana", "orange"]))
+
+        // Bai 4
+        function findStrStrartAandO(arr){
+            return arr.filter(ele => ele[0]== 'a' || ele[0] == 'o');
+        }
+        console.log(findStrStrartAandO(["apple", "banana", "orange"]))
+
+        // Bai 5
+        function findDivisor(arr){
+            return arr.filter(ele => 10 % ele == 0);
+        }
+        console.log(findDivisor([1, 2, 3, 4, 5]));
+
+        // Bai 6
+        function Ex6(arr){
+            return arr.filter(ele => ele.length >= 6 && ele[ele.length -1] == 'e')
+        }
+        console.log(Ex6(["apple", "banana", "orange"]))
+
+        // bai 7
+        function Ex7(arr){
+            return arr.filter(ele => checkPrime(ele.length))
+        }
+        console.log(Ex7(["apple", "banana", "orange"]))
+
+        // Bai 8
+        function calculateSum(arr){
+            
+        }
+
+        // Bai 9
+        function Ex9(arr){
+            return arr.reduce((total, ele) => {
+                if(ele %2 !== 0 && ele % 3 === 0) 
+                    return total+ele;
+                return total;
+            }, 0);
+        }
+        console.log(Ex9([1, 2, 3, 4, 5, 6]));
+    </script>
+</body>
+</html>
