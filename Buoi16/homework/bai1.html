@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = [
+            {
+                name: "Iphone 13 Pro Max", // Tên sản phẩm
+                price: 30000000, // Giá mỗi sản phẩm
+                brand: "Apple", // Thương hiệu
+                count: 2, // Số lượng sản phẩm trong giỏ hàng
+            },
+            {
+                name: "Samsung Galaxy Z Fold3",
+                price: 41000000,
+                brand: "Samsung",
+                count: 1,
+            },
+            {
+                name: "IPhone 11",
+                price: 15500000,
+                brand: "Apple",
+                count: 1,
+            },
+            {
+                name: "OPPO Find X3 Pro",
+                price: 19500000,
+                brand: "OPPO",
+                count: 3,
+            },
+        ]
+
+        // 1. In ra thông tin các sản phẩm trong giỏ hàng theo cấu trúc sau
+        // Tên - Giá - Thương Hiệu - Số lượng
+        // Ví dụ : OPPO Find X3 Pro - 19500000 - OPPO - 3
+        function showInfo(arr){
+            arr.forEach(element => {
+                console.log(`${element.name} - ${element.price} - ${element.count}`)
+            });
+        }
+        showInfo(products);
+        // 2. Tính tổng tiền tất cả sản phẩm trong giỏ hàng
+        // Tổng tiền mỗi sản phẩm = price * count
+        function calculateSumMoney(arr){
+            return arr.map(ele =>ele.price * ele.count);
+        }
+        console.log(calculateSumMoney(products))
+
+        // 3. Tìm các sản phẩm của thuơng hiệu "Apple"
+        function findByBrand(arr, brand){
+            return arr.filter(ele => ele.brand === brand);
+        }
+        console.log(findByBrand(products, "Apple"))
+
+        // 4. Tìm các sản phẩm có giá > 20000000
+        function findByPrice(arr, value){
+            return arr.filter(ele => ele.price > value);
+        }
+        console.log(findByPrice(products, 20000000))
+
+        // 5. Tìm các sản phẩm có chữ "pro" trong tên (Không phân biệt hoa thường)
+        function findByName(arr, keyword){
+            return arr.filter(ele => ele.name.toLowerCase().includes(keyword.toLowerCase()));
+        }
+        console.log(findByName(products, "pro"));
+
+        // 7. Xóa tất cả sản phẩm của thương hiệu "Samsung" trong giỏ hàng
+        function deleteByBrand(arr, nameBrand){
+            return arr.filter((ele) => ele.brand !== nameBrand);
+        }
+        console.log(deleteByBrand(products, "Samsung"))
+
+        // 6. Thêm 1 sản phẩm bất kỳ vào trong mảng product
+        function addProduct(arr){
+            // arr.push(products = {
+            //     name: "Iphone 14",
+            //     price: 21000000,
+            //     brand: "Apple",
+            //     count: 3,
+            // })
+            // arr.unshift(products = {
+            //     name: "Iphone 14 Pro",
+            //     price: 24000000,
+            //     brand: "Apple",
+            //     count: 6,
+            // })
+            arr.splice(4, 0, {
+                name: "Iphone 14 Pro Max",
+                price: 29000000,
+                brand: "Apple",
+                count: 6,
+            })
+
+            return arr;
+        }
+        console.log(addProduct(products));
+
+        // 8. Sắp xếp giỏ hàng theo price tăng dần
+        function sort(arr){
+            return arr.sort((p1, p2) => p1.price - p2.price)
+        }
+        console.log(sort([...products]))
+        // 9. Sắp xếp giỏ hàng theo count giảm dần
+        function sortRevers(arr){
+            return arr.sort((p1, p2) => p2.price - p1.price)
+        }
+        console.log(sortRevers([...products]))
+        // 10. Lấy ra 2 sản phẩm bất kỳ trong giỏ hàng
+        function getRandomProducts(arr, numProduct){
+            if(numProduct > arr.length){
+                return [];
+            }
+            
+            let randomProducts = [];
+            while(randomProducts.length < numProduct){
+                let colectProduct = arr[Math.floor(Math.random()*arr.length)];
+                if(!randomProducts.includes(colectProduct)){
+                    randomProducts.push(colectProduct);
+                }
+            }
+            return randomProducts;
+        }
+        console.log(getRandomProducts(products, 2));
+    </script>
+</body>
+</html>

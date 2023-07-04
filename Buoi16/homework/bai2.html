@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const grades = [
+            {name: 'John', grade: 8, sex: 'M'},
+            {name: 'Sarah', grade: 12, sex: 'F'},
+            {name: 'Bob', grade: 16, sex: 'M'},
+            {name: 'Johnny', grade: 2, sex: 'M'},
+            {name: 'Ethan', grade: 4, sex: 'M'},
+            {name: 'Paula', grade: 18, sex: 'F'},
+            {name: 'Donald', grade: 5, sex: 'M'},
+            {name: 'Jennifer', grade: 13, sex: 'F'},
+            {name: 'Courtney', grade: 15, sex: 'F'},
+            {name: 'Jane', grade: 9, sex: 'F'}
+        ]
+
+        // 1.Viết function tính thứ hạng trung bình của cả lớp
+        function averageGrade(arr){
+            let sum = arr.reduce(function(total, ele){
+                return total+ele.grade;
+            },0)
+            return sum/arr.length;
+        }
+        console.log(averageGrade(grades));
+    
+        // 2.Viết function tính thứ hạng trung bình của nam trong lớp
+        // 3.Viết function tính thứ hạng trung bình của Nữ trong lớp
+        function averageGradeOfSex(arr, keyword){
+            let filter_gender = arr.filter(ele => ele.sex === keyword)
+            let sum = filter_gender.reduce(function(total, ele){
+                return total+ele.grade;
+            },0)
+            return sum/filter_gender.length;
+        }
+        console.log(averageGradeOfSex(grades, "M"));
+        console.log(averageGradeOfSex(grades, "F"));
+
+        // 4.Viết function tìm học viên Nam có thứ hạng cao nhất trong lớp
+        function MaxGradeOfSex(arr, gender){
+            let filter_gender = arr.filter(ele => ele.sex === gender)
+            let highestGrade = filter_gender.reduce((MAX, ele) => 
+                Math.max(MAX, ele.grade), filter_gender[0].grade);
+            return filter_gender.filter(ele => ele.grade === highestGrade);
+        }
+        console.log(MaxGradeOfSex([...grades], "M"));
+        // 5.Viết function tìm học viên Nữ có thứ hạng cao nhất trong lớp
+        console.log(MaxGradeOfSex([...grades], "F"));
+
+        // 6.Viết function tìm học viên Nam có thứ hạng thấp nhất trong lớp
+        function MinGradeOfSex(arr, gender){
+            let filter_gender = arr.filter(ele => ele.sex === gender)
+            let lowestGradeStudent = filter_gender.reduce((lowestStudent, student) => 
+                Math.min(lowestStudent, student.grade), filter_gender[0].grade);
+            return filter_gender.filter(ele => ele.grade === lowestGradeStudent);
+        }
+        console.log(MinGradeOfSex([...grades], "M"));
+        // 7.Viết function tìm học viên Nữ có thứ hạng thấp nhất trong lớp
+        console.log(MinGradeOfSex([...grades], "F"));
+
+        // 8.Viết function thứ hạng cao nhất của cả lớp
+        function MaxGrade(arr){
+            let highestGrade = arr.reduce((MAX, ele) => 
+                Math.max(MAX, ele.grade), arr[0].grade);
+            return arr.filter(ele => ele.grade === highestGrade);
+        }
+        console.log(MaxGrade(grades));
+
+        // 9.Viết function thứ hạng thấp nhất của cả lớp
+        function minGrade(arr){
+            let lowestGrade = arr.reduce((min, ele) => 
+                Math.min(min, ele.grade), arr[0].grade);
+            return arr.filter(ele => ele.grade === lowestGrade);
+        }
+        console.log(minGrade(grades));
+
+        // 10.Viết function lấy ra danh sách tất cả học viên Nữ trong lớp
+        function findByGender(arr, gender){
+            return filter_gender = arr.filter(ele => ele.sex === gender);
+        }
+        console.log(findByGender(grades, "F"))
+
+        // 11.Viết function sắp xếp tên học viên theo chiều tăng dần của bảng chữ cái
+        function sortByName(arr){
+            return arr.sort((student1, student2) => {
+                const nameA = student1.name.toLowerCase();
+                const nameB = student2.name.toLowerCase();
+                if(nameA < nameB) return -1;
+                if(nameA > nameB) return 1;
+                return 0;
+            });
+        }
+        console.log(sortByName([...grades]))
+
+        // 12.Viết function sắp xếp thứ hạng học viên theo chiều giảm dần
+        function sortByGrade(arr){
+            return arr.sort((student1, student2) => student2.grade - student1.grade);
+        }
+        console.log(sortByGrade([...grades]))
+
+        // 13.Viết function lấy ra học viên Nữ có tên bắt đầu bằng “J”
+        function findByCharacter(arr, gender, keyword){
+            return arr.filter(ele => ele.sex === gender && ele.name.startsWith(keyword));
+        }
+        console.log(findByCharacter(grades, "F", "J"))
+
+        // 14.Viết function lấy ra top 5 người có thứ hạng cao nhất trong lớp
+        function getStudentOfTop(arr, num){
+            let arrange = arr.sort((student1, student2) => student2.grade - student1.grade);
+            return arrange.splice(0, num);
+        }
+        console.log(getStudentOfTop([...grades], 5))
+    </script>
+</body>
+</html>

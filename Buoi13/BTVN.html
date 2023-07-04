@@ -9,42 +9,51 @@
     <script>
         // Bai 01
         function checkStringExist(string, sub_string) {
-            let stringLength = string.length;
-            let sub_stringLength = sub_string.length;
+            // let stringLength = string.length;
+            // let sub_stringLength = sub_string.length;
 
-            if (sub_stringLength > stringLength) {
-                return false;
-            }
+            // if (sub_stringLength > stringLength) {
+            //     return false;
+            // }
 
   
-            for (let i = 0; i <= stringLength - sub_stringLength; i++) {
-                let match = true;
+            // for (let i = 0; i <= stringLength - sub_stringLength; i++) {
+            //     let match = true;
 
-                for (let j = 0; j < sub_stringLength; j++) {
-                    if (string[i + j] !== sub_string[j]) {
-                        match = false;
-                        break;
-                    }
-                }
+            //     for (let j = 0; j < sub_stringLength; j++) {
+            //         if (string[i + j] !== sub_string[j]) {
+            //             match = false;
+            //             break;
+            //         }
+            //     }
 
-                if (match) {
-                    return true;
-                }
-            }
+            //     if (match) {
+            //         return true;
+            //     }
+            // }
 
-                return false;
+            //     return false;
+
+            // Cach 2
+            return string.includes(sub_string);
         }
             console.log(checkStringExist("I love you", "you")); 
             console.log(checkStringExist("I love you", "hate"));  
 
         // Bai 2
         function shortenString(string, num_character, appendStr){
-            let newString = "";
-            for(let i = 0; i < num_character; i++){
-                newString += string[i];
+            // let newString = "";
+            // for(let i = 0; i < num_character; i++){
+            //     newString += string[i];
+            // }
+            // newString += appendStr;
+            // return newString;
+
+            // Cách 2
+            if(string.length <= num_character){
+                return string
             }
-            newString += appendStr;
-            return newString;
+            return `${string.substr(0, num_character)}${appendStr}`;
         }
         console.log(shortenString("Xin chao cac ban", 8, "..."));
 
@@ -106,35 +115,38 @@
 
         // Bai 5
         function convertToSnakeCase(str) {
-            let result = "";
-            let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-            let uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            let digits = "0123456789";
-            let isPreviousCharSpace = false;
+            // let result = "";
+            // let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+            // let uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            // let digits = "0123456789";
+            // let isPreviousCharSpace = false;
 
-            for (let i = 0; i < str.length; i++) {
-                let currentChar = str[i];
-                let isCurrentCharSpace = currentChar === " ";
+            // for (let i = 0; i < str.length; i++) {
+            //     let currentChar = str[i];
+            //     let isCurrentCharSpace = currentChar === " ";
 
-                if (isCurrentCharSpace) {
-                    isPreviousCharSpace = true;
-                } else {
-                if (isPreviousCharSpace) {
-                    result += "_";
-                    isPreviousCharSpace = false;
-                }
+            //     if (isCurrentCharSpace) {
+            //         isPreviousCharSpace = true;
+            //     } else {
+            //     if (isPreviousCharSpace) {
+            //         result += "_";
+            //         isPreviousCharSpace = false;
+            //     }
 
-                if (lowercaseChars.includes(currentChar)) {
-                    result += currentChar;
-                } else if (uppercaseChars.includes(currentChar)) {
-                    result += "_" + lowercaseChars[uppercaseChars.indexOf(currentChar)];
-                } else if (digits.includes(currentChar)) {
-                    result += currentChar;
-                }
-                }
-            }
+            //     if (lowercaseChars.includes(currentChar)) {
+            //         result += currentChar;
+            //     } else if (uppercaseChars.includes(currentChar)) {
+            //         result += "_" + lowercaseChars[uppercaseChars.indexOf(currentChar)];
+            //     } else if (digits.includes(currentChar)) {
+            //         result += currentChar;
+            //     }
+            //     }
+            // }
 
-            return result;
+            // return result;
+                // Cách 2
+            // return str.toLowerCase().replaceAll(" ", "_");
+            return str.toLowerCase().split(" ").join("_")
         }
 
         console.log(convertToSnakeCase("Hello world"));                
