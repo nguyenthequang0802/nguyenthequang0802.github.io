@@ -101,10 +101,21 @@
         sortByAge(users);
 
         // Bai 7
-        function getCountElement(arr){
+        function getCountElement(arr) {
+            const countObj = {};
 
+            for (let i = 0; i < arr.length; i++) {
+                const element = arr[i];
+                if (countObj[element]) {
+                countObj[element]++;
+                } else {
+                countObj[element] = 1;
+                }
+            }
+
+            return countObj;
         }
-
+        console.log(getCountElement(["one", "two", "three", "one", "one", "three"]));
 
     </script>
 </body>
