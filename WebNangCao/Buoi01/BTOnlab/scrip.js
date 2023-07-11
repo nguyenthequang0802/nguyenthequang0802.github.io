@@ -11,14 +11,30 @@ Array.from(para).map(elem => {
 })
 
 // Thêm thẻ a link đến trang ‘facebook’ ở đằng sau thẻ có class “para-3”
-const socialMediaList = [
-    {
-        lable: "Facebook",
-        link: "https://facebook.com"
-    },
-];
 
-html += `<a href="${socialMediaList.link}">${socialMediaList.lable}</a>`;
-const para3 = document.querySelector(".para3")
+const para3 = document.querySelector(".para-3");
+const html = '<a href="www.facebook.com">Facebook</a>';
+para3.insertAdjacentHTML('afterend', html);
 
+// Thay đổi nội dung của thẻ có id=“title” thành “Đây là thẻ tiêu đề”
+const title = document.querySelector("#title");
+title.textContent = "Đây là thẻ tiêu đề";
 
+// Thêm class “text-bold” vào thẻ có class=“description”
+const description = document.querySelector(".description");
+description.classList.add('text-bold');
+description.style.fontWeight = "bold";
+
+// Thay thế thẻ có class=“para-3” thành thẻ button có nội dung là “Click me”
+const btn = document.createElement("button");
+btn.innerText = "Click Me";
+para3.parentElement.replaceChild(btn, para3);
+
+// Copy thẻ có class=“para-2” và hiển thị ngay đằng sau thẻ đó
+const para2 = document.querySelector(".para-2");
+const copyPara2 = para2.cloneNode(true);
+para2.insertAdjacentElement("afterend", copyPara2)
+
+// Xóa thẻ có class=“para-1”
+const para1 = document.querySelector(".para-1");
+para1.parentElement.removeChild(para1)
