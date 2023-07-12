@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .btn-top{
+            padding: 10px 20px;
+            border: none;
+            background-color: tomato;
+            color: white;
+
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo exercitationem temporibus nam quia nihil magni impedit eveniet modi doloribus veritatis at fuga ipsa sed, quaerat iusto labore quasi laudantium maiores?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis debitis praesentium mollitia veritatis necessitatibus possimus quis cupiditate, ab, odit officia aliquid molestias aspernatur? Similique pariatur odio blanditiis delectus magnam rerum.</p>
+    <button class="btn-top">Top</button>
+
+    <script>
+        //Ẩn-hiện nút backtotop
+        const btnTop = document.querySelector(".btn-top")
+        window.addEventListener("scroll", function(){
+            if(document.documentElement.scrollTop>250){
+                btnTop.style.display = "inline-block";
+            } else{
+                btnTop.style.display = "none";
+            }
+        })
+        
+        btnTop.addEventListener("click", function(){
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+    </script>
+</body>
+</html>

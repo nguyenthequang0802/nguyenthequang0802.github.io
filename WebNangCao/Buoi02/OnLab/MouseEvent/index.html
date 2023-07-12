@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: tomato;
+            transition: all 0,4s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // TH1: Tạo mới hình tròn ở mỗi lần click
+        // document.addEventListener('click', function(event){
+
+        //     const precircle = document.querySelector(".circle");
+        //     if (precircle){
+        //         precircle.parentElement.removeChild(precircle);
+        //     }
+
+        //     const circle = document.createElement("div");
+        //     circle.classList.add("circle");
+
+        //     circle.style.top = `${event.offsetY-50}px`;
+        //     circle.style.left = `${event.offsetX-50}px`;
+        //     document.body.appendChild(circle);
+        // })
+
+        // Th2: Thay đổi vị trí hình tròn 
+
+        document.addEventListener('click', function(event){
+
+            const precircle = document.querySelector(".circle");
+            if (!precircle){
+                let circle = document.createElement("div");
+                circle.classList.add("circle");
+                circle.style.top = `${event.offsetY-50}px`;
+                circle.style.left = `${event.offsetX-50}px`;
+                document.body.appendChild(circle);
+            }else{
+                precircle.style.top = `${event.offsetY-50}px`;
+                precircle.style.left = `${event.offsetX-50}px`;
+            }
+        })
+    </script>
+</body>
+</html>
