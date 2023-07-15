@@ -41,42 +41,44 @@ const productList = [
     }
 ]
 
-const listProducts = document.querySelector(".product-list");
+// "10000".replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") # => "10,000"
+// Format tiền theo định dạng VND
+const formatPrice = price => {
+    return price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + " VND"
+}
 
+// Hiển thị ds product
+const productListEl = document.querySelector(".product-list");
 const renderProducts = products => {
     let html = "";
-    products.forEach(element => {
+    products.forEach(p => {
         html += `
-        <div class="col-md-3">
-        <div class="course-item shadow-sm rounded mb-4">
-            <div class="course-item-image">
-                <img src=${element.thumbnail}
-                    alt="${element.name}" />
-            </div>
-            <div class="course-item-info p-3">
-                <h2 class="fs-5 mb-4 text-dark">
-                    ${element.name}
-                </h2>
-                <div
-                    class="d-flex justify-content-between align-items-center fw-light text-black-50">
-                    <p class="type">${element.brand}</p>
-                    <p class="rating">
-                        <span>3</span>
-                        <span class="text-warning"><i class="fa-solid fa-star"></i></span>
-                    </p>
+            <div class="col-md-3">
+                <div class="course-item shadow-sm rounded mb-4">
+                    <div class="course-item-image">
+                        <img src="${p.thumbnail}"
+                            alt="${p.name}" />
+                    </div>
+                    <div class="course-item-info p-3">
+                        <h2 class="fs-5 mb-4 text-dark">
+                            ${p.name}
+                        </h2>
+                        <div class="d-flex justify-content-between align-items-center fw-light text-black-50">
+                            <p class="type">${p.brand}</p>
+                            <p class="rating">
+                                <span>${p.rating}</span>
+                                <span class="text-warning"><i class="fa-solid fa-star"></i></span>
+                            </p>
+                        </div>
+                        <p class="price text-danger fs-5">
+                            ${formatPrice(p.price)}
+                        </p>
+                    </div>
                 </div>
-                <p class="price text-danger fs-5">
-                    11.000.000 VND
-                </p>
             </div>
-        </div>
-    </div>
         `
-        
     });
+    productListEl.innerHTML = html;
 }
 
 renderProducts(productList);
-
-
-// "10000".replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") # => "10,000"
