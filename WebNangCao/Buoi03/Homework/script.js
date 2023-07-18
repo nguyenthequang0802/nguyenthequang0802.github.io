@@ -32,29 +32,52 @@ const listUser = [
 ];
 
 const testimonialsContainer = document.querySelector('.testimonials-container');
-const textElement = document.querySelector('.testimonials-container .text');
-const nameElement = document.querySelector('.testimonials-container .name');
-const authorElements = document.querySelectorAll('.testimonials-container .author');
+const textElement = document.querySelector('.text');
+const nameElement = document.querySelector('.name');
+const authorElements = document.querySelectorAll('.author');
+const authorList = document.querySelector('.authors-container')
 
-function handleUserClick(index) {
-    textElement.textContent = listUser[index].quote;
-    nameElement.textContent = listUser[index].name;
+// function handleUserClick(index) {
+//     textElement.textContent = listUser[index].quote;
+//     nameElement.textContent = listUser[index].name;
 
-    authorElements.forEach(author => {
-        author.classList.remove('selected');
+//     authorElements.forEach(author => {
+//         author.classList.remove('selected');
+//     });
+
+//     authorElements[index].classList.add('selected');
+
+//     testimonialsContainer.style.background = listUser[index].color;
+// }
+
+// authorElements.forEach((author, index) => {
+//     author.addEventListener('click', () => {
+//         handleUserClick(index);
+//     });
+// });
+
+
+const renderAuthorImage = arr => {
+    let html = "";
+    arr.forEach(element => {
+       html += `
+            <div class="author selected">
+                <img src="${element.image}" alt="">
+            </div>
+       ` 
     });
-
-    authorElements[index].classList.add('selected');
-
-    testimonialsContainer.style.background = listUser[index].color;
 }
 
-authorElements.forEach((author, index) => {
-    author.addEventListener('click', () => {
-        handleUserClick(index);
-    });
-});
+const activeAuthor = (arr, index) => {
+    const preSelectedEl = document.querySelector(".selected");
+    if(preSelectedEl){
+        preSelectedEl.classList.remove("selected");
+    }
+    const currentEl = document.querySelector(`.author:nth-child(${index + 1})`);
+    currentEl.classList.add("selected");
 
+    const 
+}
 
 
 
