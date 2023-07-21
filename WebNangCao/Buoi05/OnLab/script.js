@@ -26,6 +26,9 @@ let promotionCode = {
     D: 40,
 };
 
+const discount = document.querySelector('.discount');
+const discountElem = document.querySelector('.discount span');
+
 function renderUI() {
     let html = "";
     let total = 0;
@@ -33,7 +36,7 @@ function renderUI() {
         html="Chưa có sản phẩm nào trong giỏ hàng";
     } else {
         for(let i = 0; i < products.length; i++){
-            total += products[i].price;
+            // total += products[i].price;
             html += `
                 <li class="row">
                     <div class="col left">
@@ -65,7 +68,7 @@ function renderUI() {
                 </li>
             `
         }
-        document.getElementsByClassName('totalAll')[0].innerHTML = '$' +total;
+        // document.getElementsByClassName('totalAll')[0].innerHTML = '$' +total;
     } 
     document.getElementById('products').innerHTML = html;
     updateTotalPrice();
@@ -91,44 +94,41 @@ function removeItem(id){
     renderUI();
 }
 
-// let discount = document.querySelector('.discount');
-// let discountElem = document.querySelector('.discount span');
+
+
 
 function updateTotalPrice() {
+   
+
     let total = 0;
     let discountMoney = 0;
     for (let i = 0; i < products.length; i++) {
         let quantity = document.getElementById('product_' + products[i].id).value;
         total += products[i].price * quantity;
     }
+
+    let data = checkCodeVoucher();
+    if(data){
+        discountMoney = (total*data)/100;
+        discount.classList.remove('hide')
+    }
+    else{
+       discount.classList.add('hide');
+    }
+
     document.getElementsByClassName('totalAll')[0].innerHTML = '$' + total;
-
-    // Áp dụng mã giảm giá
-    // let data = checkPromotion();
-    // if(data){
-    //     discountMoney = (total*data)/100;
-    //     discount.classList.remove('hide');
-    // } else{
-    //     discount.classList.add('hide');
-    // }
-
-    // document.getElementsByClassName('vat').innerText = total*0.05;
-    // discountElem.innerText = discountMoney;
-    // document.getElementsByClassName('total').innerText = total*1.05-discountMoney
+    document.querySelector('.vat span').innerHTML = total*0.05;
+    discountElem.innerText = discountMoney;
+    document.querySelector('.total span').innerHTML = total *1.05 -discountMoney;
 }
 
-// let inputPromotion = document.getElementById('promo-code');
-
-// function checkPromotion() {
-//     let value = inputPromotion.value;
-//     if (promotionCode[value]) {
-//         return promotionCode[value];
-//     }
-//     return 0;
-// }
-
-// let btnPromorion  = document.querySelector('.promotion button')
-
-// btnPromorion.addEventListener('click', function(){
-//     updateTotalPrice(products);
-// })
+function checkCodeVoucher(){
+    let code = document.getElementById('promo-code').value;
+    if(promotionCode[code]){
+        return promotionCode[code];
+    }
+    return 0;
+}
+function handleVoucher(){
+    updateTotalPrice();
+}
