@@ -95,36 +95,61 @@ function renderUI(arr = products) {
 
 }
 
-renderUI();
+// renderUI();
+$(document).ready(function() {
+    renderUI();
+});
 
-function handleSearch(){
-    let selectCategory = document.getElementById('search-category').value;
+// function handleSearch(){
+//     let selectCategory = document.getElementById('search-category').value;
+//     let productSearch = products;
+//     if(selectCategory){
+//         productSearch = productSearch.filter(elem => elem.category === selectCategory);
+//     }
+//     let minPrice = document.getElementsByClassName('min-price')[0].value;
+//     let maxPrice = document.getElementsByClassName('max-price')[0].value;
+
+//     if(minPrice ){
+//         productSearch = productSearch.filter(elem => elem.price >= minPrice);
+//         console.log(productSearch);
+//     }   
+//     if(maxPrice){
+//         productSearch = productSearch.filter(elem => elem.price <= maxPrice);
+//     }
+
+//     let keySearch = document.querySelector('.keyword').value.trim().toLowerCase();
+   
+//     productSearch = productSearch.filter(elem => elem.name.toLowerCase().includes(keySearch))
+//     // console.log(productSearch);
+//     renderUI(productSearch);
+// }
+
+
+$('.button-search button').on('click', function() {
+    let selectCategory = $('#search-category').val();
     let productSearch = products;
     if(selectCategory){
         productSearch = productSearch.filter(elem => elem.category === selectCategory);
     }
-    let minPrice = document.getElementsByClassName('min-price')[0].value;
-    let maxPrice = document.getElementsByClassName('max-price')[0].value;
-
-    // if(minPrice && !maxPrice){
-
-    // } else if(maxPrice && ){
-
-    // } else if(minPrice && maxPrice){
-
-    // } else{
-
-    // }
-
+    let minPrice = $('.min-price').val();
+    let maxPrice = $('.max-price').val();
     if(minPrice ){
         productSearch = productSearch.filter(elem => elem.price >= minPrice);
         console.log(productSearch);
-    }  
+    }   
     if(maxPrice){
         productSearch = productSearch.filter(elem => elem.price <= maxPrice);
     }
 
-    // console.log(productSearch);
-    renderUI(productSearch);
-}
+    let keySearch = $('.keyword').val().trim().toLowerCase();
+    productSearch = productSearch.filter(elem => elem.name.toLowerCase().includes(keySearch));
 
+    renderUI(productSearch);
+});
+
+// Get parameters from url
+let url = window.location.href;
+url = new URL(url);
+
+var c = url.searchParams.get('id');
+console.log(c);
