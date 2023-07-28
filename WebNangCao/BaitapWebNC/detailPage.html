@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/font-awesome_5.15.3_css_all.min.css" />
     <link rel="stylesheet" href="./css/styleHomePage.css" />
+    <link rel="stylesheet" href="./css/styleDetailPage.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,7 +15,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="./data/products.js"></script>
   </head>
   <body>
     <div class="master-wrapper-page">
@@ -79,52 +79,49 @@
         </nav>
       </div>
 
-      <div class="content-homePage">
-        <div class="title-category">
-          <h2 class="category">IPhone</h2>
-        </div>
-
-        <div class="filter-search">
-          <section class="container">
-            <div class="category">
-              <select name="" id="search-category">
-                <option value="">none</option>
-                <option value="Iphone 13">Iphone 13</option>
-                <option value="Iphone 13 Pro Max">Iphone 13 Pro Max</option>
-                <option value="Iphone 13 Pro">Iphone 13 Pro</option>
-                <option value="Iphone 14">Iphone 14</option>
-                <option value="Iphone 14 Pro">Iphone 14 Pro</option>
-                <option value="Iphone 12">Iphone 12</option>
-                <option value="Iphone 11">Iphone 11</option>
-                <option value="Iphone XS">Iphone XS</option>
-                <option value="Iphone X">Iphone X</option>
-              </select>
+      <div class="product-details">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="..."
+                class="img-fluid rounded-start"
+                alt="..."
+                id="product-image"
+              />
             </div>
-            <div class="price">
-              <label for="">Min price:</label>
-              <input type="number" class="min-price" />
-              <label for="">Max price:</label>
-              <input type="number" class="max-price" />
-            </div>
-            <div class="inputText">
-              Search:
-              <input type="text" class="keyword" />
-            </div>
-            <div class="button-search">
-              <button>Search</button>
-            </div>
-          </section>
-        </div>
-
-        <div class="item-list">
-          <div class="item-grid">
-            <div class="card test" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
+            <div class="col-md-8">
               <div class="card-body">
-                <a href="">
-                  <h2 class="product-title"></h2>
-                </a>
-                <span class="price"></span>
+                <h5 class="card-title" id="name">Card title</h5>
+                <p class="card-text" id="product-title">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <span class="price" id="product-price"></span> <br />
+                <input
+                  type="number"
+                  id="product-quantity"
+                  placeholder="Nhập số lượng sản phẩm"
+                  min="1"
+                />
+
+                <div class="operation">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg"
+                    id="btn-add-to-cart"
+                  >
+                    Thêm vào giỏ hàng
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-lg"
+                    id="btn-buy-now"
+                  >
+                    Mua hàng
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -142,10 +139,7 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
+    <script src="./js/detailPage.js"></script>
     <script src="./js/homePage.js"></script>
-
-    <!-- <script>
-      
-    </script> -->
   </body>
 </html>

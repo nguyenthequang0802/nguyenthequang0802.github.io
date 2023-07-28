@@ -1,0 +1,11 @@
+.product-details{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: #FFFFFF;
+}
+
+#product-quantity, #btn-add-to-cart{
+    margin-bottom: 5px;
+}
+
