@@ -13,6 +13,23 @@ a{
     text-decoration: none;
 }
 
+p{
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    border-style: none;
+    vertical-align: middle;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -25,6 +42,10 @@ a{
 
 .header .header-top{
     border-bottom: 1px solid #f1f1f1;
+}
+
+.header .header-top .text-right{
+    text-align: right !important;
 }
 
 .header .header-top p{
@@ -49,5 +70,334 @@ a{
     font-weight: bold;
     color: #000;
     font-size: 16px;
+    text-decoration: none;
+}
+
+.navigation__column{
+    float: left;
+}
+
+.navigation__column.left{
+    width: 17%;
+}
+
+.header .ps-logo{
+    padding-top: 0;
+    display: inline-block;
+    line-height: 55px;
+}
+
+.header .ps-logo img{
+    max-height: 65px;
+}
+
+.navigation__column.center{
+    width: 60%;
+}
+
+.navigation .center{
+    text-align: center;
+}
+
+.menu>li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu>li>a{
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    /* line-height: 70px; */
+    text-transform: uppercase;
+    color: #000;
+}
+
+.right{
+    text-align: right;
+    width: 23%;
+    display: contents;
+}
+
+.searchform{
+    margin-right: 15px;
+    position: relative;
+    /* display: inline-block; */
+    vertical-align: top;
+    width: 100%;
+    max-width: 260px;
+}
+
+.searchform>input{
+    border: none;
+    height: 40px;
+    background-color: #f3f3f3;
+    border-radius: 40px;
+    font-size: 13px;
+    color: #222222;
+}
+
+.searchform>button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    right: 15px;
+    color: #000;
+    border: none;
+    background-color: transparent;
+    transition: all 0.4s ease;
+}
+
+.ps-cart{
+    line-height: 80px;
+    position: relative;
+    display: inline-block;
+}
+
+.ps-cart__toggle{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    top: 15px;
+}
+
+.ps-cart__toggle span{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #fed700;
+    color: #000;
+}
+
+.ps-cart__toggle i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+.ps-main{
+    margin-top: 180px;
+}
+
+.ps-footer{
+    /* background: url(https://kingshoes.vn/template/Default/img/parallax.jpg);
+    background-position: 50% 50% !important;
+    background-size: cover !important; */
+    background-color: #000;
+    position: relative;
+}
+
+.ps-footer__content{
+    padding: 80px 0 50px 0;
+}
+
+.ps-logo{
+    margin-bottom: 15px;
+    max-width: 200px;
+    display: inline-block;
+}
+
+.ps-footer p{
+    font-weight: 400;
+    color: #999;
+}
+
+.ps-footer p strong{
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.ps-widget__title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.8em;
+    margin-top: 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.ps-list__line a{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    color: #7d8997;
+}
+
+.copyrightPage{
+    color: #848484;
+    margin-top: 55px;
+}
+
+.ps-list__line li i{
+    color: #fff !important;
+    font-size: 20px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.under__footer{
+    border-top: 1px solid #b3b3b3;
+    padding: 10px 0;
+}
+
+.under__footer p{
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+}
+
+.under__footer p{
+    font-weight: 700;
+    color: #ccc;
+}
+
+#back-top{
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    font-size: 34px;
+    cursor: pointer;
+    background-color: #191919;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    z-index: 1000;
+    padding: 3px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#back-top svg{
+    display: block;
+    transform: rotate(180deg);
+    width: 32px;
+    height: 32px;
+    fill: #FFFFFF;
+}
+
+
+/* Card Product */
+
+.ps-shoe{
+    margin-bottom: 40px;
+}
+
+.ps-shoe .ps-shoe__thumbnail{
+    position: relative;
+    z-index: 100;
+    padding: 0;
+}
+
+.ps-shoe__thumbnail .product-label-group{
+    left: 0;
+}
+
+.product-label-group{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 75px;
+    height: auto;
+    z-index: 100;
+    color: #fff;
+}
+
+.product-label-group .product-label{
+    background-color: #fed700;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.ps-shoe__content{
+    display: block;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0;
+}
+
+.ps-shoe .ps-shoe__detail{
+    margin-bottom: 0;
+    position: relative;
+    min-height: 60px;
+    background-color: #fff;
+}
+
+.ps-shoe__name{
+    font-size: 17px;
+    font-weight: 700;
+    color: #5b5b5b;
+    line-height: 1.4em;
+    height: 44px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.ps-shoe .ps-shoe__price{
+    display: block;
+    font-size: 16px;
+    color: #5b5b5b;
+    height: 45px;
+    font-weight: bold;
+}
+
+/* Hover*/
+#back-top:hover,
+.header-nav .right .ps-cart__toggle:hover{
+    background-color: #fed700;
+}
+.header-nav .center .nav-item:hover,
+.header-nav .center .nav-item a:hover{
+    background-color: #fed700;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.header-top .user-check a:hover,
+.header-top .hotline-top a:hover,
+.ps-features-product .ps-section__header h3 a:hover,
+.ps-features-product .ps-product .ps-shoe__detail a:hover,
+.ps-footer .ps-list__line a:hover{
+    color: #fed700;
     text-decoration: none;
 }
