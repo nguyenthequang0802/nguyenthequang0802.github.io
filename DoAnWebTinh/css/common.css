@@ -30,6 +30,10 @@ img{
     vertical-align: middle;
 }
 
+label{
+    font-size: 16px;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -192,7 +196,45 @@ img{
 }
 
 .ps-main{
-    margin-top: 180px;
+    margin-top: 140px;
+}
+
+/* Header main */
+section.search{
+    padding: 10px 0 20px 0;
+    background: #f1f1f1;
+    margin-bottom: 25px;
+}
+
+section.search .category{
+    margin: 0;
+}
+
+.label-search{
+    font-style: italic;
+    text-transform: capitalize;
+    height: 23px;
+    display: block;
+}
+
+section.search .inputText input{
+    padding-left: 10px;
+}
+
+section.search select, 
+section.search input,
+section.search button{
+    width: 100%;
+    height: 40px;
+}
+
+section.search button{
+    background-color: #fed700;
+    color: #fff;
+    border: none;
+    margin-top: 23px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .ps-footer{
@@ -381,6 +423,73 @@ img{
     font-weight: bold;
 }
 
+/* sidebar */
+.ps-widget__sidebar{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 25px;
+    margin-top: 25px;
+}
+
+.ps-widget__sidebar .ps-widget__header{
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #626262;
+    text-transform: uppercase;
+}
+
+.ps-shoe__sidebar .ps-shoe__title{
+    font-size: 14px;
+    font-weight: 700;
+    color: #626262;
+    text-transform: uppercase;
+}
+
+.ps-shoe__sidebar .ps-shoe__content{
+    margin-bottom: 0;
+    color: #e81010;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* pagination */
+.ps-pagination{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pagination{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25em;
+    justify-content: center;
+}
+
+.ps-pagination .pagination a {
+    display: inline-block;
+    float: left;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 0 10px;
+    position: relative;
+    z-index: 30;
+    font-size: 16px;
+    color: #313131;
+    line-height: 50px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    background-color: gainsboro !important;
+
+}
+
+
+
 /* Hover*/
 #back-top:hover,
 .header-nav .right .ps-cart__toggle:hover{
@@ -397,7 +506,9 @@ img{
 .header-top .hotline-top a:hover,
 .ps-features-product .ps-section__header h3 a:hover,
 .ps-features-product .ps-product .ps-shoe__detail a:hover,
-.ps-footer .ps-list__line a:hover{
+.ps-footer .ps-list__line a:hover,
+.ps-shoe__sidebar .ps-shoe__title:hover
+{
     color: #fed700;
     text-decoration: none;
 }

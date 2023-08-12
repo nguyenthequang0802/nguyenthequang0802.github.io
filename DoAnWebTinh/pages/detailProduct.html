@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/common.css">
-    <!-- <link rel="stylesheet" href="./css/index.css"> -->
-    <link rel="stylesheet" href="../css/listProduct.css">
+    <link rel="stylesheet" href="../css/detailProduct.css">
 
 </head>
 <body>
@@ -153,149 +152,128 @@
                 </div>
             </div>
         </section>
-
-        <section class="ps-features-product ps-section">
+        <section class="ps-product__detail">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 col-md-9 col-12">
-                        <div class="ps-product">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="card ps-shoe">
-                                        <img src="https://kingshoes.vn/data/upload/media/SNEAKER-315122-111-AIR-FORCE-1-07-NIKE-KINGSHOES.VN-TPHCM-TANBINH-17-logo-1551924204-.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body ps-shoe__content">
-                                            <div class="ps-shoe__detail">
-                                                <a href="" class="ps-shoe__name">Air Force 1</a>
-                                                <p class="ps-shoe__price">3,300,000 đ</p>
-                                            </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-12">
+                        <div class="ps-product__thumbnail">
+                            <div class="ps-product__preview">
+                                <div class="ps-product__variants">
+                                    <div class="item">
+                                        <div class="image-full">
+                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image-full">
+                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image-full">
+                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image-full">
+                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image-full">
+                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="card ps-shoe">
-                                        <div class="ps-shoe__thumbnail">
-                                            <div class="product-label-group">
-                                                <div class="product-label">
-                                                    <span>Sale</span>
+                            </div>
+                            <div class="ps-product__image">
+                                <div class="slick-list">
+                                    <div class="slick-track">
+                                        <div class="item">
+                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-34.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ps-product__info">
+                            <h1 class="ps-product__name">Air Force 1 Low QS</h1>
+                            <p class="ps-product__id">
+                                Mã SP:
+                                <strong>AF001</strong>
+                            </p>
+                            <h3 class="ps-product__price">
+                                <b class="new-price">3,200,000 đ</b>
+                                <del class="old-price">3,900,000 đ</del>
+                            </h3>
+                            <div class="size-color">
+                                <div class="product-form product-size">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <ul class="wapper_cb size d-flex flex-wrap justify-content-center justify-content-lg-start">
+                                                <li class="cb">
+                                                    <input type="radio" class="btn-check" name="options-base" id="option1" autocomplete="off">
+                                                    <label class="btn" for="option1">38</label>
+                                                </li>
+                                                <li class="cb">
+                                                    <input type="radio" class="btn-check" name="options-base" id="option2" autocomplete="off">
+                                                    <label class="btn" for="option2">38.5</label>
+                                                </li>
+                                                <li class="cb">
+                                                    <input type="radio" class="btn-check" name="options-base" id="option3" autocomplete="off">
+                                                    <label class="btn" for="option3">39</label>
+                                                </li>
+                                                <li class="cb">
+                                                    <input type="radio" class="btn-check" name="options-base" id="option4" autocomplete="off">
+                                                    <label class="btn" for="option4">40</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="" method="post" class="ProductForm mb-4" id="addToCart">
+                                <div class="form-group d-block d-sm-flex align-items-sm-center justify-content-center justify-content-lg-start">
+                                    <div class="product-form product-quantity">
+                                        <div class="product-form-group">
+                                            <div class="number_price d-flex justify-content-center">
+                                                <div class="custom">
+                                                    <button class="reduce items-count sub">-</button>
+                                                    <input type="text" class="input-text quantity" title="Quantity" min="1" maxlength="12" id="quantity"
+                                                    value="1" readonly>
+                                                    <button class="increase items-count add">+</button>
                                                 </div>
                                             </div>
-                                            <img src="https://kingshoes.vn/data/upload/media/SNEAKER-315122-111-AIR-FORCE-1-07-NIKE-KINGSHOES.VN-TPHCM-TANBINH-17-logo-1551924204-.jpg" class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="card-body ps-shoe__content">
-                                            <div class="ps-shoe__detail">
-                                                <a href="" class="ps-shoe__name">Air Force 1</a>
-                                                <p class="ps-shoe__price">3,300,000 đ</p>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="card ps-shoe">
-                                        <img src="https://kingshoes.vn/data/upload/media/SNEAKER-315122-111-AIR-FORCE-1-07-NIKE-KINGSHOES.VN-TPHCM-TANBINH-17-logo-1551924204-.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body ps-shoe__content">
-                                            <div class="ps-shoe__detail">
-                                                <a href="" class="ps-shoe__name">Air Force 1</a>
-                                                <p class="ps-shoe__price">3,300,000 đ</p>
-                                            </div>
-                                        </div>
+                                <div class="row m-3">
+                                    <div class="col-12 col-lg-7 p-0" style="">
+                                        <button class="btn btn-warning ps-btn d-block m-0 w-100 text-center btn-pro-detail ">
+                                            <i class="fa-solid fa-cart-plus"></i>
+                                            Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                    <div class="col-12 col-lg-5 p-0">
+                                        <button class="btn btn-danger ps-btn d-block m-0 w-100 text-center btn-pro-detail ">
+                                            Mua ngay
+                                            <i class="fa-solid fa-right-to-bracket"></i> 
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="card ps-shoe">
-                                        <img src="https://kingshoes.vn/data/upload/media/SNEAKER-315122-111-AIR-FORCE-1-07-NIKE-KINGSHOES.VN-TPHCM-TANBINH-17-logo-1551924204-.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body ps-shoe__content">
-                                            <div class="ps-shoe__detail">
-                                                <a href="" class="ps-shoe__name">Air Force 1</a>
-                                                <p class="ps-shoe__price">3,300,000 đ</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="block-phone">
+                                    <span class="text">Hoặc đặt mua: </span>
+                                    <a href="">0909300746</a>
+                                    (Tư vấn Miễn Phí)
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="card ps-shoe">
-                                        <img src="https://kingshoes.vn/data/upload/media/SNEAKER-315122-111-AIR-FORCE-1-07-NIKE-KINGSHOES.VN-TPHCM-TANBINH-17-logo-1551924204-.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body ps-shoe__content">
-                                            <div class="ps-shoe__detail">
-                                                <a href="" class="ps-shoe__name">Air Force 1</a>
-                                                <p class="ps-shoe__price">3,300,000 đ</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="card ps-shoe">
-                                        <img src="https://kingshoes.vn/data/upload/media/SNEAKER-315122-111-AIR-FORCE-1-07-NIKE-KINGSHOES.VN-TPHCM-TANBINH-17-logo-1551924204-.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body ps-shoe__content">
-                                            <div class="ps-shoe__detail">
-                                                <a href="" class="ps-shoe__name">Air Force 1</a>
-                                                <p class="ps-shoe__price">3,300,000 đ</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="ps-pagination">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a href="" class="page-link"><</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="" class="page-link">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="" class="page-link">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="" class="page-link">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="" class="page-link">4</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="" class="page-link">></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                        <div class="ps-widget__sidebar">
-                            <div class="ps-widget__content">
-                                <a href="">
-                                    <img src="https://kingshoes.vn/data/upload/files/bannersitebar01.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="ps-widget__sidebar">
-                            <div class="ps-widget__header">
-                                <h3>Sản phẩm liên quan</h3>
-                            </div>
-                            <div class="ps-widget__content">
-                                <div class="card mb-3 ps-shoe__sidebar" style="max-width: 540px;">
-                                    <div class="row g-0">
-                                        <div class="col-md-4 ps-shoe__thumbnail">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-adidas-yeezy-boost-350-v2-beluga-reflective-gw1229-king-shoes-sneaker-real-hcm-11-1639905369.jpeg" class="img-fluid rounded-start" alt="...">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body ps-shoe__content">
-                                                <a href="">
-                                                    <h5 class="card-title ps-shoe__title">Yeezy boost 350 v2 beluga reflective</h5>
-                                                </a>
-                                                <p class="card-text">12,000,000 đ</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
     </main>
-
     <footer>
         <div class="ps-footer">
             <div class="ps-footer__content">
