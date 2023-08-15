@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/detailProduct.css">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
 
 </head>
 <body>
@@ -112,199 +112,127 @@
     </header>
 
     <main class="ps-main">
-        <section class="search">
-            <div class="container">
-                <div class="row">
-                    <div class="select-category col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                        <div class="category">
-                            <label for="" class="label-search">Loại sản phẩm</label>
-                            <select name="" id="search-category">
-                                <option value="">none</option>
-                                <option value="Giay">Giày</option>
-                                <option value="Dep">Dép</option>
-                            </select>
+        <section class="ps-content">
+            <div class="container" id="">
+                <div class="ps-cart-listing">
+                    <div class="cartPage">
+                        <div class="ps-post__header">
+                            <h1 class="ps-post__title">Giỏ hàng</h1>
                         </div>
-                    </div>
-                    <div class="select-price col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                        <div class="price">
-                            <label for="" class="label-search">Khoảng Giá</label>
-                            <select name="" id="search-price">
-                                <option value="">Tất cả</option>
-                                <option value="0-3000000">Dưới 3 Triệu</option>
-                                <option value="3000000-5000000">Từ 3 đến 5 Triệu</option>
-                                <option value="5000000-10000000">Từ 5 đến 10 Triệu</option>
-                                <option value="10000000-0">Trên 10 Triệu</option>
-                                
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input-search col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                        <div class="inputText">
-                            <label for="" class="label-search">Key search</label>
-                            <input type="text" class="keyword" placeholder="Nhập từ tìm kiếm">
-                        </div>
-                    </div>
-                    <div class="btn-search-lock col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                        <div class="button-search">
-                            <button >Search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="ps-product__detail">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-lg-12">
-                        <div class="ps-product__thumbnail">
-                            <div class="ps-product__preview">
-                                <div class="ps-product__variants">
-                                    <div class="item">
-                                        <div class="image-full">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="image-full">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="image-full">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="image-full">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="image-full">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-33.jpeg" alt="">
-                                        </div>
-                                    </div>
+                        <div class="itemCart">
+                            <div class="infoCart row">
+                                <div class="image col-3">
+                                    <a href="">
+                                        <img src="https://kingshoes.vn/data/upload/media/dn1635-100-giay-nike-air-jordan-1-low-inside-out-chinh-hang-gia-tot-den-king-shoes-15.jpeg" alt="">
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="ps-product__image">
-                                <div class="slick-list">
-                                    <div class="slick-track">
-                                        <div class="item">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-34.jpeg" alt="">
+                                <div class="numberPrice col-9">
+                                    <div class="title">
+                                        <a href="">
+                                            <h3>JORDAN 1 LOW CRAFT</h3>
+                                        </a>
+                                    </div>
+                                    <div class="attribute_pro">
+                                        <span class="badge bg-warning me-2">
+                                            Size Giày:
+                                            <b>44</b>
+                                        </span>
+                                    </div>
+                                    <p>
+                                        <b>Mã SP:</b>
+                                        JD001
+                                    </p>
+                                    <div class="number">
+                                        <div class="form-group__number">
+                                            <button class="minus" type="button">
+                                                <span>-</span>
+                                            </button>
+                                            <input type="text" class="form-control" id="" value="1">
+                                            <button class="plus" type="button">
+                                                <span>+</span>
+                                            </button>
                                         </div>
+                                        <i class="fa-solid fa-xmark"></i>
+                                        <span class="textPrice">4,800,000đ</span>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ps-product__info">
-                            <h1 class="ps-product__name">Air Force 1 Low QS</h1>
-                            <p class="ps-product__id">
-                                Mã SP:
-                                <strong>AF001</strong>
-                            </p>
-                            <h3 class="ps-product__price">
-                                <b class="new-price">3,200,000 đ</b>
-                                <del class="old-price">3,900,000 đ</del>
-                            </h3>
-                            <div class="size-color">
-                                <div class="product-form product-size">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <ul class="wapper_cb size d-flex flex-wrap justify-content-center justify-content-lg-start">
-                                                <li class="cb">
-                                                    <input type="radio" class="btn-check" name="options-base" id="option1" autocomplete="off">
-                                                    <label class="btn" for="option1">38</label>
-                                                </li>
-                                                <li class="cb">
-                                                    <input type="radio" class="btn-check" name="options-base" id="option2" autocomplete="off">
-                                                    <label class="btn" for="option2">38.5</label>
-                                                </li>
-                                                <li class="cb">
-                                                    <input type="radio" class="btn-check" name="options-base" id="option3" autocomplete="off">
-                                                    <label class="btn" for="option3">39</label>
-                                                </li>
-                                                <li class="cb">
-                                                    <input type="radio" class="btn-check" name="options-base" id="option4" autocomplete="off">
-                                                    <label class="btn" for="option4">40</label>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                    <div class="total_price">
+                                        Thành tiền:
+                                        <span class="textPrice">4,800,000đ</span>
                                     </div>
-                                </div>
-                            </div>
-                            <form action="" method="post" class="ProductForm mb-4" id="addToCart">
-                                <div class="form-group d-block d-sm-flex align-items-sm-center justify-content-center justify-content-lg-start">
-                                    <div class="product-form product-quantity">
-                                        <div class="product-form-group">
-                                            <div class="number_price d-flex justify-content-center">
-                                                <div class="custom">
-                                                    <button class="reduce items-count sub">-</button>
-                                                    <input type="text" class="input-text quantity" title="Quantity" min="1" maxlength="12" id="quantity"
-                                                    value="1" readonly>
-                                                    <button class="increase items-count add">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row m-3">
-                                    <div class="col-12 col-lg-7 p-0" style="">
-                                        <button class="btn btn-warning ps-btn d-block m-0 w-100 text-center btn-pro-detail ">
-                                            <i class="fa-solid fa-cart-plus"></i>
-                                            Thêm vào giỏ
-                                        </button>
-                                    </div>
-                                    <div class="col-12 col-lg-5 p-0">
-                                        <button class="btn btn-danger ps-btn d-block m-0 w-100 text-center btn-pro-detail ">
-                                            Mua ngay
-                                            <i class="fa-solid fa-right-to-bracket"></i> 
+                                    <div class="btnCart">
+                                        <button class="btnClick btnDel">
+                                            <i class="fa-solid fa-xmark"></i>
                                         </button>
                                     </div>
                                 </div>
-                                <div class="block-phone">
-                                    <span class="text">Hoặc đặt mua: </span>
-                                    <a href="">0909300746</a>
-                                    (Tư vấn Miễn Phí)
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section style="text-align: center;">
-            <div class="container">
-                <div class="tab-content tab-content-info">
-                    <div class="tab-pane active">
-                        <p>
-                            ⚡️ 
-                            <strong>KINGSHOES.VN</strong>
-                            ✓15 Ngày Đổi Hàng ✓Giao Hàng Miễn Phí ✓Thanh Toán Khi Nhận Hàng ✓Bảo Hành Hàng Chính Hãng Trọn Đời.!!!
-                        </p>
-                        <p style="text-align: center;">
-                            <img alt="" src="https://static.xx.fbcdn.net/images/emoji.php/v9/f51/1/16/1f449.png">
-                            <img alt="" src="https://static.xx.fbcdn.net/images/emoji.php/v9/f51/1/16/1f449.png">
-                            <img alt="" src="https://static.xx.fbcdn.net/images/emoji.php/v9/f51/1/16/1f449.png">
-                            <strong>KINGSHOES>VN "You're King In Your Way".!!!</strong>
-                            <img alt="" src="https://static.xx.fbcdn.net/images/emoji.php/v9/f9d/1/16/1f45f.png">
-                            <img alt="" src="https://static.xx.fbcdn.net/images/emoji.php/v9/f9d/1/16/1f45f.png">
-                            <img alt="" src="https://static.xx.fbcdn.net/images/emoji.php/v9/f9d/1/16/1f45f.png">
-                        </p>
-                        <p style="text-align: center;">
-                            <a href="https://kingshoes.vn/king-and-queen" id="KING'S &amp; QUEEN'S Check in Tại KINGSHOES.VN" title="KING'S &amp; QUEEN'S Check in Tại KINGSHOES.VN" type="KING'S &amp; QUEEN'S Check in Tại KINGSHOES.VN">
-                                <strong>KING'S &amp; QUEEN'S Check in Tại KINGSHOES.VN</strong>
-                            </a>
-                        </p>
-                        <p style="text-align: center;">
-                            <strong>192/2 Nguyễn Thái Bình, phường 12, quận Tân Bình, thành phố Hồ Chí Minh</strong>
-                        </p>
-                        <p>
-                            <strong>
-                                <strong>
-                                    <strong>Đến với "KINGSHOES.VN” quý khách hàng sẽ có những sản phẩm ưng ý nhất, chất lượng phục vụ tốt và giá thành tốt nhất, cùng những “Chương Trình Khuyến Mãi Đặc Biệt”.</strong>
-                                </strong>
-                            </strong>
-                        </p>
+                        <div class="itemCart sumItemCart row justify-content-end">
+                            <div class="col-auto ">
+                                <div class="infoSum">
+                                    <b>Tổng tiền:</b>
+                                    <span class="sumPrice textPrice" style="color: red;">4,800,000đ</span>
+                                </div>
+                            </div>
+                            <div class="col-auto col-12 d-flex justify-content-end">
+                                <div class="buyNext">
+                                    <a href="" class="ps-btn">
+                                        Mua tiếp
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                <div class="buyNext">
+                                    <a href="" class="ps-btn">
+                                        Đặt hàng
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ps-cart__actions">
+                            <div class="ps-cart__promotion">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="ps-contact__block mb-0 pb-0 mt-0 pt-0">
+                                            <p>
+                                                <span>
+                                                    <img src="https://kingshoes.vn/data/upload/media/king-shoes-thanh-toan.png" alt="">
+                                                </span>
+                                            </p>
+                                            <p>
+                                                <strong>Mua hàng trên website KingShoes.vn:</strong>
+                                            </p>
+                                            <p><strong>1) Giao - Nhận:</strong></p>
+                                            <p>KingShoes.vn ship hàng toàn quốc COD - Kiểm tra hàng trước và thanh toán trực tiếp khi nhận hàng.;</p>
+                                            <p>
+                                                <strong>2) Đặt cọc - Xác nhận đơn hàng - Giao hàng: ( Áp dụng cho KH ngoại thành HCM và mua lần đầu )</strong>
+                                            </p>
+                                            <p>Bạn cọc bằng 2 hình thức nạp card điện thoại mobifone hoặc chuyển khoản 
+                                                <strong>200K</strong> 
+                                                vào tài khoản ngân hàng 
+                                                <strong>(nội dung ck: ghi họ tên và số điện thoại)</strong>. Kingshoes liện lạc xác nhận cọc và ship hàng ngay cho Bạn.
+                                            </p>
+                                            <p>
+                                                <span id="cke_bm_739S" style="display: none;"><span id="cke_bm_989S" style="display: none;">&nbsp;</span>&nbsp;</span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span>&nbsp;Ngân Hàng <b>VietcomBank</b>&nbsp;<span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><br>
+                                                ✅ STK: <b>103 270 3333</b>&nbsp;<br>
+                                                ✅ CTK: <b>KING SHOES</b>&nbsp;✅ CN VCB Tân Định - PGD Trần Quốc Toản
+                                            </p>
+                                            <p>
+                                                <span id="cke_bm_739S" style="display: none;">&nbsp;</span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span>&nbsp;Ngân Hàng <strong>ACB</strong>&nbsp;<span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><span contenteditable="false" tabindex="-1"><img alt="" data-widget="image" height="16" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png" width="16"></span><br>
+                                                ✅ STK: <b>6633 8888 68</b>&nbsp;<br>
+                                                ✅ CTK: <b>KING SHOES</b>&nbsp;✅ CN ACB - PGD NGUYEN KHOAI
+                                            </p>
+                                            <p>
+                                                <span contenteditable="false" tabindex="-1"><img alt="King Shoes tài khoản ngân hàng" data-widget="image" height="670" src="https://kingshoes.vn/data/upload/media/10-2022/Ngan-hang-tai-khoan-king-shoes.jpeg" width="550"></span>
+                                            </p>
+                                            <p>
+                                                <strong>---Chúng tôi biết BẠN có nhiều sự lựa chọn. Cảm ơn BẠN đã chọn KING SHOES.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -434,4 +362,3 @@
     <script src="../js/common.js"></script>
 </body>
 </html>
-

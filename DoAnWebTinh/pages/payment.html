@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+    
+    <div class="content">
+        <div class="row">
+            <div class="main col-lg-6 col-12">
+                <div class="main-header">
+                    <a href="" class="logo">
+                        <img src="https://kingshoes.vn/data/upload/media/cu%CC%9B%CC%89a-ha%CC%80ng-gia%CC%80y-sneaker-chi%CC%81nh-ha%CC%80ng-uy-ti%CC%81n-nha%CC%82%CC%81t-de%CC%82%CC%81n-king-shoes-authenti-hcm-6.png" alt="">
+                    </a>
+                </div>
+                <div class="main-content">
+                    <div class="step">
+                        <form id="form_infomation" action="" class="clearfix order-checkout__loading" accept-charset="UTF-8" method="post">
+                            <div class="step-sections">
+                                <div class="section">
+                                    <div class="section-header mb-3">
+                                        <h2 class="section-title">Thông tin giao hàng</h2>
+                                    </div>
+                                    <div class="section-content section-customer-information">
+                                        <div class="container">
+                                            <div class="row fieldset">
+                                                <div class="col-7 pb-3">
+                                                    <div class="input-wrapper">
+                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Họ và tên">
+                                                    </div>
+                                                </div>
+                                                <div class="col-5 pb-3">
+                                                    <div class="input-wrapper">
+                                                        <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Số điện thoại" maxlength="12" minlength="10">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 pb-3">
+                                                    <div class="input-wrapper">
+                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Địa chỉ">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 pb-3">
+                                                    <div class="input-wrapper">
+                                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 pb-3">
+                                                    <div class="input-wrapper">
+                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nội dung">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-footer">
+                                <button class="btn btn-primary previous" type="submit">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <span class="btn-previous">Tiếp tục thanh toán</span>
+                                </button>
+                                <button class="btn btn-primary continue" type="submit">
+                                    <span class="btn-content">Tiếp tục thanh toán</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar col-lg-6 col-12">
+                <div class="sidebar-content">
+                    <div class="order-summary">
+                        <h2>Thông tin đơn hàng</h2>
+                        <div class="order-summary-sections">
+                            <div class="order-summary-section product-list">
+                                <div class="row product">
+                                    <div class="product-image col-2">
+                                        <a href="">
+                                            <div class="product-thumbnail">
+                                                <div class="product-thumbnail-wrapper">
+                                                    <img src="https://kingshoes.vn/data/upload/media/dn1635-100-giay-nike-air-jordan-1-low-inside-out-chinh-hang-gia-tot-den-king-shoes-15.jpeg" alt="" class="product-thumbnail-image">
+                                                </div>
+                                                <span class="product-thumbnail-quantity">1</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="product-description col-5">
+                                        <a href="">
+                                            <span class="product-description-name">JORDAN 1 LOW CRAFT</span>
+                                        </a>
+                                        <div class="attribute_pro">
+                                            <span class="badge bg-primary me-2">
+                                                Size Giày:
+                                                <b>44</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="product-price col-2">
+                                        <span>4,800,000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-summary-section discount">
+                                <div>
+                                    <form id="form_discount_add" accept-charset="UTF-8" method="post">
+                                        <div class="fieldset">
+                                            <div class="field">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mã giảm giá">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <button class="btn btn-primary">Sử dụng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="order-summary-section payment-lines">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ps-footer">
+            <div class="ps-footer__content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <a href="" class="ps-logo">
+                                <img src="https://kingshoes.vn/data/upload/media/cua-hang-giay-sneaker-chinh-giay-uy-tin-nhat-den-king-shoes-authenti-hcm-2-1624430336.png" alt="">
+                            </a>
+                            <p>
+                                <strong>KINGSHOES.VN Trang Thông Tin Chính Thức.</strong>
+                            </p>
+                            <p>
+                                ⛪ 
+                                <strong>Địa chỉ: 192/2 Nguyễn Thái Bình, Phường 12, Quận Tân Bình, Thành phố Hồ Chí Minh</strong>
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <h2 class="ps-widget__title">HỖ TRỢ KHÁCH HÀNG</h2>
+                                    <ul class="ps-list__line">
+                                        <li>
+                                            <a href="">Chăm sóc khách hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Thanh toán</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hướng dẫn mua hàng</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <h2 class="ps-widget__title">CHÍNH SÁCH</h2>
+                                    <ul class="ps-list__line">
+                                        <li>
+                                            <a href="">Chế độ bảo hành</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Chính sách đổi hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Bảo mật thông tin</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Chính sách giao nhận</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="copyrightPage">
+                                        <p>
+                                            Số ĐKKD: 41N8041309 cấp ngày 17/8/2018. Nơi cấp Ủy Ban Nhân Dân Quận Tân Bình. Hộ Kinh Doanh: 
+                                            <strong>KINGSHOES. Hotline: 0909.300.746</strong>
+                                        </p>
+                                        <p>
+                                            <strong style="font-size: 20px;">CHỨNG NHẬN</strong>
+                                        </p>
+                                        <p>
+                                            <a href="http://online.gov.vn/Home/WebDetails/86431">
+                                                <img src="https://kingshoes.vn/data/upload/media/logoSaleNoti.png" alt="" height="104" width="275">
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <ul class="ps-list__line">
+                                <li>
+                                    <i class="fa-regular fa-envelope" class="footer__icon"></i>
+                                    <a href="" style="display: inline-block">Email: cskh.kingshoes.vn@gmail.com</a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-square-x-twitter" class="footer__icon"></i>
+                                    <a href="https://twitter.com/KingShoes_vn" style="display: inline-block">Twitter</a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-facebook" class="footer__icon"></i>
+                                    <a href="https://facebook.com/pg/www.KingShoes.vn" style="display: inline-block">Facebook</a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-instagram" class="footer__icon"></i>
+                                    <a href="https://instagram.com/KingShoes.vn" style="display: inline-block">Instagram</a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-youtube" class="footer__icon"></i>
+                                    <a href="https://www.youtube.com/www.KingShoes.vn" style="display: inline-block">Youtube</a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-tiktok" class="footer__icon"></i>
+                                    <a href="https://www.tiktok.com/@kingshoes_sneaker" style="display: inline-block">Tik tok</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone" class="footer__icon"></i>
+                                    <p style="display: inline-block">Hotline: 0909.300.746</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="under__footer">
+                <div class="container">
+                    <p class="myweb">
+                        © Bản quyền thuộc về 
+                        <b>KINGSHOES.VN</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"           integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="     crossorigin="anonymous"></script>
+    <script src="../js/common.js"></script>
+</body>
+</html>
+
