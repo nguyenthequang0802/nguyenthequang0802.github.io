@@ -19,6 +19,98 @@
 </head>
 <body>
     
+    <header class="header">
+        <div class="header-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-right">
+                        <p class="user-check d-inline">
+                            <a href="">👑 Feedback</a>
+                        </p>
+                        <p class="user-check d-inline">
+                            <a href="">
+                                <i class="fa-solid fa-users"></i>
+                                Login
+                            </a>
+                        </p>
+                        <p class="hotline-top d-inline">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <span class="d-none d-lg-inline-block">Hotline:</span>
+                            <a href="">0909300746</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <div class="navigation__column left">
+                        <div class="head__logo">
+                            <a href="" class="ps-logo">
+                                <img src="https://kingshoes.vn/data/upload/media/cửa-hàng-giày-sneaker-chính-hàng-uy-tín-nhất-dến-king-shoes-authenti-hcm-6.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: flex-end;">
+                        <div class="navigation__column center">
+                            <ul class="navbar-nav menu me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Giới thiệu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Nike</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Adidas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Jordan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Yeezy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sale off</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Orther brand</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Spa giày</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="right">
+                            <form class="d-flex searchform" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Nhập từ cần tìm kiếm" aria-label="Search">
+                                <button type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+
+                            <div class="ps-cart">
+                                <a class="ps-cart__toggle">
+                                    <span>
+                                        <i class="numberSumProduct"></i>
+                                    </span>
+                                    <i class="bi bi-cart2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <div class="content">
         <div class="row">
             <div class="main col-lg-6 col-12">
@@ -64,6 +156,20 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="payment-method">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Thanh toán tại nhà 
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Chuyển khoản ngân hàng
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
                                         
                                     </div>
@@ -72,10 +178,10 @@
                             <div class="step-footer">
                                 <button class="btn btn-primary previous" type="submit">
                                     <i class="fa-solid fa-chevron-left"></i>
-                                    <span class="btn-previous">Tiếp tục thanh toán</span>
+                                    <span class="btn-previous">Quay lại giỏ hàng</span>
                                 </button>
                                 <button class="btn btn-primary continue" type="submit">
-                                    <span class="btn-content">Tiếp tục thanh toán</span>
+                                    <span class="btn-content">Hoàn tất thanh toán</span>
                                 </button>
                             </div>
                         </form>
@@ -134,7 +240,38 @@
                                 </div>
                             </div>
                             <div class="order-summary-section payment-lines">
-                                
+                                <div class="total-line">
+                                    <div class="total-line-subtotal">
+                                        <div class="row">
+                                            <div class="col-6 total-line-name">
+                                                <span class="">Tạm tính</span>
+                                            </div>
+                                            <div class="col-2 price-total">
+                                                <span class="">4,800,000đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="total-line-shipping">
+                                        <div class="row">
+                                            <div class="col-6 total-line-name">
+                                                <span class="">Phí giao hàng</span>
+                                            </div>
+                                            <div class="col-2 price-total">
+                                                <span class="">Chưa bao gồm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total-end">
+                                    <div class="row">
+                                        <div class="col-6 total-line-name">
+                                            <span class="">Tổng cộng</span>
+                                        </div>
+                                        <div class="col-2 price-total-end">
+                                            <span class="">4,800,000đ</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
