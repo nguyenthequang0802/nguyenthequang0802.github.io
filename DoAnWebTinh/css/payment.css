@@ -9,7 +9,8 @@
     display: flex;
     flex-direction: column;
     padding: 95px;
-    background-color: #efe4d3;
+    /* background-color: #efe4d3; */
+    border-right: 1px dashed #ebe4e4;
 }
 
 .main .main-header{
@@ -45,6 +46,11 @@
 
 .section .section-title h2{
     font-size: 1.28571em
+}
+
+.section-content .payment-method .ps-contact__block{
+    text-align: center;
+    margin-top: 20px;
 }
 
 .fieldset{
