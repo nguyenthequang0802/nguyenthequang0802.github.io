@@ -731,7 +731,7 @@ section.search button{
 .ps-features-product .ps-section__header h3 a:hover,
 .ps-features-product .ps-product .ps-shoe__detail a:hover,
 .ps-footer .ps-list__line a:hover,
-.ps-shoe__sidebar .ps-shoe__title:hover
+.ps-shoe__sidebar .ps-shoe__title:hover, a:hover
 {
     color: #fed700;
     text-decoration: none;
