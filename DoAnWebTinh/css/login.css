@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+/* body{
+    background-image: url(https://kingshoes.vn/data/upload/media/banner-sn3web-1571294680--acbihpps-1592386128--hipspcba-1622453987.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+} */
+
 .limiter{
     width: 100%;
     margin: 0 auto;
-    background-image: url(https://kingshoes.vn/data/upload/media/banner-sn3web-1571294680--acbihpps-1592386128--hipspcba-1622453987.jpg);
 }
 
 .wrap-login{
@@ -82,6 +89,7 @@
     top: 38px;
     right: 5px;
     height: 100%;
+    cursor: pointer;
 }
 
 .show-pw i{
