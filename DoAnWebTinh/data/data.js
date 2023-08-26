@@ -56,7 +56,7 @@ products = [
 
     {
         id: "06",
-        name: "Adidas Samba Slassic",
+        name: "Adidas Samba Classic",
         brand: "Adidas",
         category: "Giay",
         image: "https://kingshoes.vn/data/upload/media/772109-giay-adidas-samba-classic-chinh-hang-gia-tot-den-king-shoes1.jpg",
@@ -199,7 +199,7 @@ products = [
     },
 
     {
-        id: "17",
+        id: "18",
         name: "Nike Air Zoom Rival Fly 3",
         brand: "Nike",
         category: "Giay",
@@ -210,7 +210,7 @@ products = [
     },
 
     {
-        id: "18",
+        id: "19",
         name: "Nike Air Max 1 PRM",
         brand: "Nike",
         category: "Giay",
@@ -221,7 +221,7 @@ products = [
     },
 
     {
-        id: "19",
+        id: "20",
         name: "Nike Jordan 1 Low Craft",
         brand: "Nike",
         category: "Giay",
@@ -232,7 +232,7 @@ products = [
     },
 
     {
-        id: "20",
+        id: "21",
         name: "Nike Jordan 4 Retro SE",
         brand: "Nike",
         category: "Giay",
@@ -243,7 +243,7 @@ products = [
     },
 
     {
-        id: "20",
+        id: "22",
         name: "Nike Jordan 1 Low Diamond",
         brand: "Nike",
         category: "Giay",
@@ -254,7 +254,7 @@ products = [
     },
 
     {
-        id: "21",
+        id: "23",
         name: "Nike Jordan 1 HI OG",
         brand: "Nike",
         category: "Giay",
@@ -265,7 +265,7 @@ products = [
     },
 
     {
-        id: "22",
+        id: "24",
         name: "Nike Dunk Low Black Paisley",
         brand: "Nike",
         category: "Giay",
@@ -276,7 +276,7 @@ products = [
     },
 
     {
-        id: "23",
+        id: "25",
         name: "Nike Air Jordan 5 Low PSG",
         brand: "Nike",
         category: "Giay",
@@ -287,7 +287,7 @@ products = [
     },
 
     {
-        id: "24",
+        id: "26",
         name: "Nike Dunk Low Retro",
         brand: "Nike",
         category: "Giay",
@@ -298,7 +298,7 @@ products = [
     },
 
     {
-        id: "25",
+        id: "27",
         name: "Yeezy Boost 350 V2",
         brand: "Yeezy",
         category: "Giay",
@@ -309,7 +309,7 @@ products = [
     },
 
     {
-        id: "26",
+        id: "28",
         name: "Yeezy Boost 380",
         brand: "Yeezy",
         category: "Giay",
@@ -320,7 +320,7 @@ products = [
     },
 
     {
-        id: "27",
+        id: "29",
         name: "Dép Adidas Adilette TND",
         brand: "Adidas",
         category: "Dep",
@@ -331,7 +331,7 @@ products = [
     },
 
     {
-        id: "28",
+        id: "30",
         name: "Dép Yeezy Slide Flax",
         brand: "Yeezy",
         category: "Dep",
@@ -342,7 +342,7 @@ products = [
     },
 
     {
-        id: "29",
+        id: "31",
         name: "Dép Jordan Hex Mule SP",
         brand: "Nike",
         category: "Dep",
@@ -353,7 +353,7 @@ products = [
     },
 
     {
-        id: "30",
+        id: "32",
         name: "Dép Jordan Break Slide Red",
         brand: "Nike",
         category: "Dep",
@@ -364,7 +364,7 @@ products = [
     },
 
     {
-        id: "31",
+        id: "33",
         name: "Dép Nike Asuna Slide Phonton Dust",
         brand: "Nike",
         category: "Dep",
@@ -375,7 +375,7 @@ products = [
     },
 
     {
-        id: "32",
+        id: "34",
         name: "Dép Puma",
         brand: "Puma",
         category: "Dep",

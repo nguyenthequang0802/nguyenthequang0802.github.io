@@ -1,0 +1,8 @@
+.pagination .page-item>a{
+    border-radius: 50% !important;
+}
+
+.pagination .page-item>a:hover{
+    background-color: #fed700 !important;
+    color: #fff;
+}

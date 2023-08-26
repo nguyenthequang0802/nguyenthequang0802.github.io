@@ -28,7 +28,7 @@
                             <a href="">👑 Feedback</a>
                         </p>
                         <p class="user-check d-inline">
-                            <a href="">
+                            <a href="./pages/login.html">
                                 <i class="fa-solid fa-users"></i>
                                 Login
                             </a>
@@ -62,22 +62,22 @@
                                     <a class="nav-link" href="#">Giới thiệu</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Nike</a>
+                                    <a class="nav-link" href="./pages/listProduct.html">Nike</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Adidas</a>
+                                    <a class="nav-link" href="./pages/listProduct.html">Adidas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Jordan</a>
+                                    <a class="nav-link" href="./pages/listProduct.html">Jordan</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Yeezy</a>
+                                    <a class="nav-link" href="./pages/listProduct.html">Yeezy</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Sale off</a>
+                                    <a class="nav-link" href="./pages/listProduct.html">Sale off</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Orther brand</a>
+                                    <a class="nav-link" href="./pages/listProduct.html">Orther brand</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Spa giày</a>
@@ -97,7 +97,7 @@
                             </form>
 
                             <div class="ps-cart">
-                                <a class="ps-cart__toggle" >
+                                <a class="ps-cart__toggle" href="./pages/shoppingCart.html">
                                     <span>
                                         <i class="numberSumProduct"></i>
                                     </span>
@@ -130,7 +130,7 @@
                                         <p>Tổng:<span class="sumPrice">3,600,000đ</span></p>
                                     </div>
                                     <div class="ps-cart__footer">
-                                        <a class="ps-btn" href="gio-hang">Giỏ hàng<i class="fa-solid fa-arrow-right"></i></a>
+                                        <a class="ps-btn" href="./pages/shoppingCart.html">Giỏ hàng<i class="fa-solid fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@
                     </h3>
                 </div>
                 <div class="ps-product">
-                    <div class="row">
+                    <div class="row product-item-1">
                         <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                             <div class="card ps-shoe">
                                 <img src="https://kingshoes.vn/data/upload/media/SNEAKER-315122-111-AIR-FORCE-1-07-NIKE-KINGSHOES.VN-TPHCM-TANBINH-17-logo-1551924204-.jpg" class="card-img-top" alt="...">
@@ -239,8 +239,9 @@
                                 </div>
                                 <div class="card-body ps-shoe__content">
                                     <div class="ps-shoe__detail">
-                                        <a href="" class="ps-shoe__name">Air Force 1</a>
+                                        <a href="./pages/detailProduct.html" class="ps-shoe__name">Air Force 1</a>
                                         <p class="ps-shoe__price">3,300,000 đ</p>
+                                        <del class="ps-shoe__oldPrice">4,000,000đ</del>
                                     </div>
                                 </div>
                             </div>
@@ -291,7 +292,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn__seeMore">
+                <div class="btn__seeMore" id="seeMore">
                     <button type="button" class="btn btn-warning">Xem Thêm</button>
                 </div>
             </div>
@@ -420,6 +421,7 @@
 
     <script src="./data/data.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
 
