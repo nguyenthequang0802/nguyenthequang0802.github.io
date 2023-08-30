@@ -100,6 +100,10 @@ label{
     width: 60%;
 }
 
+#navbarSupportedContent{
+    padding: 20px;
+}
+
 .navigation .center{
     text-align: center;
 }
@@ -407,7 +411,7 @@ label{
 }
 
 .ps-main{
-    margin-top: 140px;
+    margin-top: 180px;
 }
 
 /* Header main */

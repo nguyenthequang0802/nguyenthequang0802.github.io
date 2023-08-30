@@ -1,4 +1,4 @@
-function renderUI() {
+function renderUI(products) {
     // let html = '';
     // for(let i = 0; i < products.length; i++){
     //     if(products[i].discount === 0) {
@@ -49,7 +49,7 @@ function renderUI() {
                         <img src="${product.image}" class="card-img-top" alt="..." style="height: 304px">
                         <div class="card-body ps-shoe__content">
                             <div class="ps-shoe__detail">
-                                <a href="" class="ps-shoe__name">${product.name}</a>
+                                <a href="../pages/detailProduct.html?id=${product.id}" class="ps-shoe__name">${product.name}</a>
                                 <p class="ps-shoe__price">${convertMoney(product.price)}đ</p>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ function renderUI() {
                         </div>
                         <div class="card-body ps-shoe__content">
                             <div class="ps-shoe__detail">
-                                <a href="./pages/detailProduct.html" class="ps-shoe__name">${product.name}</a>
+                                <a href="../pages/detailProduct.html?id=${product.id}" class="ps-shoe__name">${product.name}</a>
                                 <p class="ps-shoe__price">${convertMoney(priceDiscount(product.price, product.discount))}
                                         <del class="ps-shoe__oldPrice">${convertMoney(product.price)}</del>
                                 </p>
@@ -82,14 +82,34 @@ function renderUI() {
     $('.product-item-1').html(productCards.join(""));
 }
 
-renderUI();
+$('.btn-filter').on('click', function(){
+    let selectCategory = $('#search-category').val();
+    let productSearch = products;
+    if(selectCategory){
+        productSearch  = products.filter(elem => elem.category === selectCategory);
+        // console.log(productSearch);
+    }
+    let minPrice = $('.min-price').val();
+    let maxPrice = $('.max-price').val();
+    if(minPrice ){
+        productSearch  = products.filter(elem => elem.price >= minPrice);
+        
+    }   
+    if(maxPrice){
+        productSearch  = products.filter(elem => elem.price <= maxPrice);
+    }
+    renderUI(productSearch );
+});
 
-$('.product-item-1').on('click', '.ps-shoe', function(){
+renderUI(products);
+
+$('.ps-shoe').on('click', function(){
     const productId = $(this).data('id');
-    const selectedProduct = products.find(product => product.id === productId);
+    
+    const selectedProduct = products.find(product => product.id == productId);
 
     localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
 
-    window.location.href = './pages/detailProduct.html';
-})
+    window.location.href = `../pages/detailProduct.html?id=${productId}`;
+});
 

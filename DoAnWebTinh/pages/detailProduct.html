@@ -217,11 +217,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="ps-product__image">
+                            <div class="ps-product__image" >
                                 <div class="slick-list">
                                     <div class="slick-track">
                                         <div class="item">
-                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-34.jpeg" alt="">
+                                            <img src="https://kingshoes.vn/data/upload/media/gia%CC%80y-nike-air-force-1-low-qs-cw3919-100-king-shoes-sneaker-real-hcm-34.jpeg" alt="" id="product-image">
                                         </div>
                                     </div>
                                 </div>
@@ -231,14 +231,14 @@
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="ps-product__info">
-                            <h1 class="ps-product__name">Air Force 1 Low QS</h1>
-                            <p class="ps-product__id">
+                            <h1 class="ps-product__name" id="name">Air Force 1 Low QS</h1>
+                            <p class="ps-product__id" id="ma">
                                 Mã SP:
                                 <strong>AF001</strong>
                             </p>
                             <h3 class="ps-product__price">
-                                <b class="new-price">3,200,000 đ</b>
-                                <del class="old-price">3,900,000 đ</del>
+                                <b class="new-price" id="newPrice">3,200,000 đ</b>
+                                <del class="old-price" id="oldPrice">3,900,000 đ</del>
                             </h3>
                             <div class="size-color">
                                 <div class="product-form product-size">
@@ -272,24 +272,24 @@
                                         <div class="product-form-group">
                                             <div class="number_price d-flex justify-content-center">
                                                 <div class="custom">
-                                                    <button class="reduce items-count sub">-</button>
+                                                    <button class="reduce items-count sub" id="reduce" type="button">-</button >
                                                     <input type="text" class="input-text quantity" title="Quantity" min="1" maxlength="12" id="quantity"
-                                                    value="1" readonly>
-                                                    <button class="increase items-count add">+</button>
+                                                    value="0" >
+                                                    <button class="increase items-count add" id="add" type="button">+</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row m-3">
-                                    <div class="col-12 col-lg-7 p-0" style="">
-                                        <button class="btn btn-warning ps-btn d-block m-0 w-100 text-center btn-pro-detail ">
+                                    <div class="col-12 col-lg-7 p-0">
+                                        <button class="btn btn-warning ps-btn d-block m-0 w-100 text-center btn-pro-detail" id="btn-add-to-cart" type="button">
                                             <i class="fa-solid fa-cart-plus"></i>
                                             Thêm vào giỏ
                                         </button>
                                     </div>
                                     <div class="col-12 col-lg-5 p-0">
-                                        <button class="btn btn-danger ps-btn d-block m-0 w-100 text-center btn-pro-detail ">
+                                        <button class="btn btn-danger ps-btn d-block m-0 w-100 text-center btn-pro-detail" id="btn-buy-now" type="button">
                                             Mua ngay
                                             <i class="fa-solid fa-right-to-bracket"></i> 
                                         </button>
@@ -461,12 +461,14 @@
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="Back to top"><path d="M16,21L4,8.9c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l12.7,12.7c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3l12.7-12.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L16,21z"></path></svg>
     </div>
 
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="../bootstrap/js/bootstrap.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"           integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="../data/data.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/detailProduct.js"></script>
 </body>
 </html>
 

@@ -270,52 +270,23 @@
                             <div class="ps-widget__content">
                                 <div class="filter__category">
                                     <h5 class="filter-title">Loại Sản Phẩm</h5>
-                                    <div class="value__filter">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Dép
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Giày
-                                            </label>
-                                        </div>
-                                    </div>
-                                    
+                                    <div class="category">
+                                        <select name="" id="search-category">
+                                            <option value="">none</option>
+                                            <option value="Giay">Giày</option>
+                                            <option value="Dep">Dép</option>
+                                        </select>
+                                    </div> 
                                 </div>
                                 <div class="filter__Price">
                                     <h5 class="filter-title">Khoảng Giá</h5>
-                                    <div class="value__filter">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Dưới 3 triệu
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Từ 3 triệu đến 5 triệu
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Từ 5 triệu đến 10 triệu
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Trên 10 triệu
-                                            </label>
-                                        </div>
+                                    <div class="price">
+                                        <label for="">Min price:</label>
+                                        <input type="number" class="min-price" />
+                                        <label for="">Max price:</label>
+                                        <input type="number" class="max-price" />
                                     </div>
                                     
-                                </div>
                                 <div class="btn btn-warning btn-filter">Lọc Sản Phẩm</div>
                                 <!-- <div class="card mb-3 ps-shoe__sidebar" style="max-width: 540px;">
                                     <div class="row g-0">

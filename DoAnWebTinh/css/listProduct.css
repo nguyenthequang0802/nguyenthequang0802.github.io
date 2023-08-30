@@ -6,3 +6,15 @@
     background-color: #fed700 !important;
     color: #fff;
 }
+
+.filter__category{
+    margin-bottom: 20px;
+}
+
+.filter__category select{
+    min-width: 60%;
+}
+
+.filter__Price .price{
+    margin-bottom: 20px;
+}

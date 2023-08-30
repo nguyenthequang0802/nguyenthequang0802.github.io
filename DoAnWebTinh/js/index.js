@@ -82,33 +82,17 @@ function renderUI() {
 
 renderUI();
 
-// const productItems = $('.ps-shoe');
-// productItems.forEach(productItem => {
-//     productItem.on('click', handleProductClick);
-// });
-
-// function handleProductClick(event){
-//     const productElement = event.currentTarget;
-//     const productId = productElement.getAttribute("data-id");
-
-//     const selectedProduct = products.find(
-//         (product) => product.id === parseInt(productId, 10)
-//     );
-
-//     localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
-//     console.log("Đã lưu sp");
-// }
-
 $('#seeMore').on('click', function() {
     window.location.href = './pages/listProduct.html'
 })
 
 $('.product-item-1').on('click', '.ps-shoe', function(){
     const productId = $(this).data('id');
-    const selectedProduct = products.find(product => product.id === parseInt(productId, 10));
+    
+    const selectedProduct = products.find(product => product.id == productId);
 
     localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
 
-    window.location.href = './pages/detailProduct.html';
+    window.location.href = `../pages/detailProduct.html?id=${productId}`;
 })
 
