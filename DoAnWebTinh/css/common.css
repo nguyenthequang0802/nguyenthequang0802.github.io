@@ -192,6 +192,12 @@ label{
     color: #000;
 }
 
+.ps-cart__toggle span i{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
 .ps-cart__toggle i{
     position: absolute;
     top: 50%;
@@ -223,7 +229,7 @@ label{
 
 .ps-cart__content{
     padding-top: 10px;
-    height: 145px;
+    /* height: 145px; */
 }
 
 .ps-cart-item:last-child{
