@@ -3,11 +3,57 @@ $(document).ready(function() {
     if(cartItems) {
         cartItems = JSON.parse(cartItems);
         showCartItems(cartItems);
+        headerShowCartItems(cartItems);
         attachQuantityListeners(cartItems);
     } else {
+        $('.ps-cart-item').html('<p>Không có sản phẩm nào trong giỏ hàng.</p>');
         $('.itemCart').html('<p>Không có sản phẩm nào trong giỏ hàng.</p>')
     }
 });
+
+function headerShowCartItems(cartItems){
+    const cartList = $('.ps-cart__content');
+    cartList.empty();
+
+    let subtotal = 0;
+    let totalAllQuantity = 0;
+
+    for(const cartItem of cartItems){
+        const {id, discount, name, image, price, selectedSize, quantity}= cartItem.product;
+        const newPrice = price - (price * discount)/100;
+        const totalPrice = (price - price * (discount / 100)) * quantity;
+
+        cartList.append(
+            `
+            <div class="ps-cart-item ">
+                <a href="" class="ps-cart-item__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+                <div class="ps-cart-item__thumbnail">
+                    <a href=""></a>
+                    <img src="${image}" alt="${name}">
+                </div>
+                <div class="ps-cart-item__content">
+                    <a class="ps-cart-item__title" href="">${name}</a>
+                    <div class="attribute_pro">
+                        <span class="badge bg-primary me-2">Size Giày: <b>${selectedSize}</b></span>
+                    </div>
+                    <p>
+                        <span>Số lượng:<i class="">${quantity}</i></span>
+                        <span>Thành tiền:<i class="">${convertMoney(totalPrice)}</i></span>
+                    </p>
+                </div>
+            </div>  
+            `
+        );
+        subtotal += totalPrice;
+        totalAllQuantity += quantity;
+    }
+    $('.ps-cart__toggle .numberSumProduct').text(totalAllQuantity);
+    $('.ps-cart__total .numberSumProduct').text(totalAllQuantity);
+    $('.ps-cart__total .sumPrice').text(convertMoney(subtotal))
+}
+
 
 function showCartItems(cartItems) {
     const cartList = $('.infoCart');
@@ -113,4 +159,5 @@ function attachQuantityListeners(cartItems) {
 function updateCartAndRender(cartItems) {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     showCartItems(cartItems);
+    headerShowCartItems(cartItems);
 }

@@ -385,3 +385,12 @@ products = [
         size: ["38", "38.5", "39", "39.5", "40", "40.5", "41", "42"]
     },
 ]
+
+
+let codeDiscount = {
+    namphantram: 5,
+    muoiphantram: 10,
+    haimuoiphantram: 20,
+    bamuoiphantram: 30,
+    bonmuoiphantram: 40,
+}

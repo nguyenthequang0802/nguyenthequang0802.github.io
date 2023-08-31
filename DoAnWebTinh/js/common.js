@@ -51,7 +51,7 @@ function showCartItems(cartItems){
 
         cartList.append(
             `
-            <div class="ps-cart-item ">
+            <div class="ps-cart-item" data-id="${id}">
                 <a href="" class="ps-cart-item__close">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
@@ -66,7 +66,7 @@ function showCartItems(cartItems){
                     </div>
                     <p>
                         <span>Số lượng:<i class="">${quantity}</i></span>
-                        <span>Thành tiền:<i class="">${totalPrice}</i></span>
+                        <span>Thành tiền:<i class="">${convertMoney(totalPrice)}</i></span>
                     </p>
                 </div>
             </div>  
@@ -79,3 +79,19 @@ function showCartItems(cartItems){
     $('.ps-cart__total .numberSumProduct').text(totalAllQuantity);
     $('.ps-cart__total .sumPrice').text(convertMoney(subtotal))
 }
+
+$('.ps-cart') .on('click', function(){
+    window.location.href = "../pages/shoppingCart.html";
+});
+
+$('.ps-cart__content').on('click', '.ps-cart-item__close', function(event) {
+    event.preventDefault();
+    const itemId = $(this).closest('.ps-cart-item').data('id');
+    // Tiến hành xóa sản phẩm khỏi cartItems và cập nhật giao diện
+    const itemIndex = cartItems.findIndex(item => item.product.id === itemId);
+    if (itemIndex !== -1) {
+        cartItems.splice(itemIndex, 1);
+        showCartItems(cartItems);
+    }
+});
+

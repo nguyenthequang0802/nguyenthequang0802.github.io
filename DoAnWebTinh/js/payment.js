@@ -5,7 +5,7 @@ $(document).ready(function() {
         headerShowCartItems(cartItems);
         showCartItems(cartItems);
     } else {
-        $('.ps-cart-item').html('<p>Không có sản phẩm nào trong giỏ hàng.</p>')
+        $('.ps-cart-item').html('<p>Không có sản phẩm nào trong giỏ hàng.</p>');
         $('.itemCart').html('<p>Không có sản phẩm nào trong giỏ hàng.</p>');
 
     }
@@ -40,7 +40,7 @@ function headerShowCartItems(cartItems){
                     </div>
                     <p>
                         <span>Số lượng:<i class="">${quantity}</i></span>
-                        <span>Thành tiền:<i class="">${totalPrice}</i></span>
+                        <span>Thành tiền:<i class="">${convertMoney(totalPrice)}</i></span>
                     </p>
                 </div>
             </div>  
@@ -96,6 +96,22 @@ function showCartItems(cartItems) {
         subtotal += totalPrice;
     }
     $('.subTotal').text(convertMoney(subtotal));
+
+    $('.addCodeDiscount').on('click', function(){
+        let codeDiscountInput = $('#codeDiscount').val();
+        
+        if(codeDiscount[codeDiscountInput]){
+            let dataDiscount = codeDiscount[codeDiscountInput];
+            let totalEnd = subtotal - (subtotal*dataDiscount/100);
+            $('.price-discount').html(`<span>${dataDiscount}%</span>`);
+            $('.price-total-end span').text(convertMoney(totalEnd));
+        } else{
+            swal("Thất Bại!", "Mã giảm giá bạn nhập không đúng!", "error");
+        }
+    });
+
+    $('.price-total-end span').text(convertMoney(subtotal));
+
 }
 
 $('.step-footer>.previous').on('click', function(){
@@ -131,4 +147,5 @@ $('.step-footer>.continue').on('click', function(){
             window.location.href = '../index.html';
         });
     }
-})
+});
+

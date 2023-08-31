@@ -11,7 +11,7 @@ $(document).ready(function(){
             $('#oldPrice').text('');
         } else {
             // let newPrice = priceDiscount(selectedProduct.price);
-            $("#product-image img").attr("src", selectedProduct.image);
+            $("#product-image").attr("src", selectedProduct.image);
             $('#name').text(selectedProduct.name);
             $('#ma strong').text(selectedProduct.id);
             $('#newPrice').text(convertMoney(selectedProduct.price - (selectedProduct.price*selectedProduct.discount)/100));
@@ -64,9 +64,13 @@ $('#btn-add-to-cart').on('click', function(){
             (item) => item.product.id === selectedProduct.id
         );
 
-        if(existingCartItemIndex !== -1) {
+        if(existingCartItemIndex !== -1 && selectedSize === cartItems.selectedProduct) {
             cartItems[existingCartItemIndex].product = selectedProduct;
             cartItems[existingCartItemIndex].product.quantity += quantity;
+        } else if(selectedSize !== cartItems.selectedProduct) {
+            cartItems.push({
+                product: selectedProduct,
+            });
         } else {
             cartItems.push({
                 product: selectedProduct,

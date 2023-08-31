@@ -32,7 +32,7 @@ $('#btn-signup').on('click', function(){
             button: "Đăng nhập",
         }) 
         .then ( () => {
-            window.location.href = '../pages/login.htmThất Bại';
+            window.location.href = '../pages/login.html';
         });
     }
 });
