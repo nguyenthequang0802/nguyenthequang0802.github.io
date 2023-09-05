@@ -154,6 +154,8 @@ function attachQuantityListeners(cartItems) {
             }
         });
     });
+
+
 }
 
 function updateCartAndRender(cartItems) {
