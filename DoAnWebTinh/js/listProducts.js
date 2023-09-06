@@ -1,46 +1,4 @@
 function renderUI(products) {
-    // let html = '';
-    // for(let i = 0; i < products.length; i++){
-    //     if(products[i].discount === 0) {
-    //         html += `
-    //         <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-    //             <div class="card ps-shoe">
-    //                 <img src="${products[i].image}" class="card-img-top" alt="..." style="height: 304px;">
-    //                 <div class="card-body ps-shoe__content">
-    //                     <div class="ps-shoe__detail">
-    //                         <a href="" class="ps-shoe__name">${products[i].name}</a>
-    //                         <p class="ps-shoe__price">${convertMoney(products[i].price)}</p>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>`;
-    //     } else {
-    //         html += `
-    //         <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-    //             <div class="card ps-shoe">
-    //                 <div class="ps-shoe__thumbnail">
-    //                     <div class="product-label-group">
-    //                         <div class="product-label">
-    //                             <span>-${products[i].discount}%</span>
-    //                         </div>
-    //                     </div>
-    //                     <img src="${products[i].image}" class="card-img-top" alt="..." style="height: 304px">
-    //                 </div>
-    //                 <div class="card-body ps-shoe__content">
-    //                     <div class="ps-shoe__detail">
-    //                         <a href="./pages/detailProduct.html" class="ps-shoe__name">${products[i].name}</a>
-    //                         <p class="ps-shoe__price">${convertMoney(priceDiscount(products[i].price, products[i].discount))}
-    //                             <del class="ps-shoe__oldPrice">${convertMoney(products[i].price)}</del>
-    //                         </p>
-                            
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>`;
-    //     }
-    // }
-    // $('.product-item-1').html(html);
-
     const productCards = products.map((product) => {
         if(product.discount === 0) {
             return `
@@ -87,17 +45,19 @@ $('.btn-filter').on('click', function(){
     let productSearch = products;
     if(selectCategory){
         productSearch  = products.filter(elem => elem.category === selectCategory);
-        // console.log(productSearch);
     }
     let minPrice = $('.min-price').val();
     let maxPrice = $('.max-price').val();
     if(minPrice ){
-        productSearch  = products.filter(elem => elem.price >= minPrice);
+        productSearch  = productSearch.filter(elem => elem.price >= minPrice);
         
     }   
     if(maxPrice){
-        productSearch  = products.filter(elem => elem.price <= maxPrice);
+        productSearch  = productSearch.filter(elem => elem.price <= maxPrice);
     }
+    // if(maxPrice && minPrice){
+    //     productSearch  = productSearch.filter(elem => elem.price <= maxPrice && elem.price >= minPrice);
+    // }
     renderUI(productSearch );
 });
 

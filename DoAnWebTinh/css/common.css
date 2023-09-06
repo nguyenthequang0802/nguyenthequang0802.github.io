@@ -111,6 +111,7 @@ label{
 .menu>li{
     display: inline-block;
     margin-right: 10px;
+    border-radius: 20px;
 }
 
 .menu>li>a{
@@ -576,6 +577,7 @@ section.search button{
 .ps-shoe{
     margin-bottom: 40px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .ps-shoe:hover{
@@ -653,7 +655,7 @@ section.search button{
 .ps-shoe .ps-shoe__price{
     display: inline-block;
     font-size: 16px;
-    color: #5b5b5b;
+    color: #fb0000;
     height: 45px;
     font-weight: bold;
 }
