@@ -110,7 +110,8 @@ ul.wapper_cb>li.cb{
     padding-right: 0;
     padding-bottom: 0;
     box-sizing: border-box;
-    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
 }
 
 .number_price>.custom{
