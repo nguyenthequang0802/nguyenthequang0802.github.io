@@ -27,6 +27,7 @@ ul{
 
 img{
     max-width: 100%;
+    height: auto;
     border-style: none;
     vertical-align: middle;
 }
@@ -97,7 +98,7 @@ label{
 }
 
 .navigation__column.center{
-    width: 60%;
+    width: 90%;
 }
 
 #navbarSupportedContent{
@@ -137,7 +138,7 @@ label{
     position: relative;
     /* display: inline-block; */
     vertical-align: top;
-    width: 100%;
+    width: 45%;
     max-width: 260px;
 }
 
@@ -418,7 +419,7 @@ label{
 }
 
 .ps-main{
-    margin-top: 180px;
+    margin-top: 140px;
 }
 
 /* Header main */

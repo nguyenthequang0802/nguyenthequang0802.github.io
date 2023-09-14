@@ -1,43 +1,4 @@
 function renderUI() {
-    // let html = '';
-    // for(let i = 0; i < 10; i++){
-    //     if(products[i].discount === 0) {
-    //         html += `
-    //         <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-    //             <div class="card ps-shoe" data-id="${products[i].id}">
-    //                 <img src="${products[i].image}" class="card-img-top" alt="...">
-    //                 <div class="card-body ps-shoe__content">
-    //                     <div class="ps-shoe__detail">
-    //                         <a href="" class="ps-shoe__name">${products[i].name}</a>
-    //                         <p class="ps-shoe__price">${convertMoney(products[i].price)}đ</p>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>`;
-    //     } else {
-    //         html += `
-    //         <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-    //             <div class="card ps-shoe" data-id="${products[i].id}">
-    //                 <div class="ps-shoe__thumbnail">
-    //                     <div class="product-label-group">
-    //                         <div class="product-label">
-    //                             <span>-${products[i].discount}%</span>
-    //                         </div>
-    //                     </div>
-    //                     <img src="${products[i].image}" class="card-img-top" alt="...">
-    //                 </div>
-    //                 <div class="card-body ps-shoe__content">
-    //                     <div class="ps-shoe__detail">
-    //                         <a href="./pages/detailProduct.html" class="ps-shoe__name">${products[i].name}</a>
-    //                         <p class="ps-shoe__price">${convertMoney(priceDiscount(products[i].price, products[i].discount))}
-    //                             <del class="ps-shoe__oldPrice">${convertMoney(products[i].price)}</del>
-    //                         </p>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>`;
-    //     }
-    // }
     const maxProductsToShow = 10;
     const productCards = products.slice(0, maxProductsToShow).map((product) => {
         if(product.discount === 0) {

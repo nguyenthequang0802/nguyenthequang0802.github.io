@@ -44,20 +44,19 @@ $('.btn-filter').on('click', function(){
     let selectCategory = $('#search-category').val();
     let productSearch = products;
     if(selectCategory){
-        productSearch  = products.filter(elem => elem.category === selectCategory);
+        productSearch  = productSearch.filter(elem => elem.category === selectCategory);
     }
     let minPrice = $('.min-price').val();
     let maxPrice = $('.max-price').val();
+    console.log(productSearch);
     if(minPrice ){
         productSearch  = productSearch.filter(elem => elem.price >= minPrice);
-        
+        console.log(productSearch);
     }   
     if(maxPrice){
         productSearch  = productSearch.filter(elem => elem.price <= maxPrice);
+        console.log(productSearch);
     }
-    // if(maxPrice && minPrice){
-    //     productSearch  = productSearch.filter(elem => elem.price <= maxPrice && elem.price >= minPrice);
-    // }
     renderUI(productSearch );
 });
 

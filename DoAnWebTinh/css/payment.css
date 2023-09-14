@@ -113,6 +113,10 @@ a{
     text-align: center;
 }
 
+.product .product-image{
+    display: contents !important;
+}
+
 .sidebar .sidebar-content .order-summary .product .product-image .product-thumbnail{
     width: 4.6em;
     height: 4.6em;
