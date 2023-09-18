@@ -9,11 +9,13 @@
     // TODO: Tạo form đăng nhập với username và password .
     // Viết code PHP để kiểm tra xem họ đã đăng nhập đúng chưa với $usernam và $password giả định trước
     // Hiển thị thông báo lỗi khi đăng nhập
-    $username = "admin";
-    $password = "admin";
+    $correct_username = "admin";
+    $correct_password = "admin";
     $error = "";
 
-    if
+    if($_SERVER["REQUEST_METHOD"] = "POST"){
+
+    }
 
     ?>
     <form action="#" method="post">
