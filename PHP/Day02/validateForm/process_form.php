@@ -12,16 +12,42 @@
 
     // Hàm validate email
     // Viết code ở đây
-    $errors = [];
-    function validateName($email) {
+    function validateEmail($email) {
+
+        $email = preg_replace('/\s+/', ' ', $email);
         if (empty(trim($email))) {
-            $errors['email']['required'] =  'Email không được để trống';
+            echo 'Email không được để trống <br>';
         } else {
-            if
+            if (preg_match("/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/", $email, $matches)) {
+//                echo 'Email không đúng định dạng <br>';
+                if (count($matches) == 0) {
+                    echo "Email không đúng định dạng <br>";
+                } else {
+                    echo "Email nhậpg đúng <br>";
+                }
+            }
         }
     }
     // Hàm validate name
     // Viết code ở đây
+    function validateName($name) {
+        $name = preg_replace('/\s+/', ' ', trim($name));
+
+        if (empty(trim($name))) {
+            echo 'Tên không được để trống';
+        } else {
+            if (preg_match("/^[a-z_-]{2,16}$/", $name, $matches)) {
+//                echo 'Tên không đúng định dạng';
+                if (count($matches) == 0) {
+                    echo "Tên không đúng định dạng <br>";
+                } else {
+                    echo "Tên nhập đúng";
+                }
+            }
+        }
+    }
+    validateEmail($email);
+    validateName($name);
     ?>
 </body>
 </html>
