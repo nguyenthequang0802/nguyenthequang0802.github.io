@@ -109,6 +109,10 @@ label{
     text-align: center;
 }
 
+.nav-item a{
+    border-radius: 20px;
+}
+
 .menu>li{
     display: inline-block;
     margin-right: 10px;
@@ -761,4 +765,28 @@ section.search button{
 
 a:hover{
     text-decoration: none;
+}
+
+@media (max-width: 1024px){
+    .header-nav .nav-item .nav-link{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 991px){
+    .header-nav .navbar>.container-fluid{
+        position: relative;
+    }
+
+    .header-nav .right .ps-cart{
+        position: absolute;
+        top: 0;
+        right: 95px;
+    }
+
+    .header-nav .navbar-toggler{
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
 }
