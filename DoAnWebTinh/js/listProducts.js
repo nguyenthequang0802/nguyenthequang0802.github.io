@@ -2,9 +2,9 @@ function renderUI(products) {
     const productCards = products.map((product) => {
         if(product.discount === 0) {
             return `
-                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="card ps-shoe" data-id="${product.id}">
-                        <img src="${product.image}" class="card-img-top" alt="..." style="height: 304px">
+                        <img src="${product.image}" class="card-img-top" alt="..." style="height: auto">
                         <div class="card-body ps-shoe__content">
                             <div class="ps-shoe__detail">
                                 <a href="../pages/detailProduct.html?id=${product.id}" class="ps-shoe__name">${product.name}</a>
@@ -15,7 +15,7 @@ function renderUI(products) {
                 </div>`;
         } else{
             return `
-                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="card ps-shoe" data-id="${product.id}">
                         <div class="ps-shoe__thumbnail">
                             <div class="product-label-group">
@@ -23,7 +23,7 @@ function renderUI(products) {
                                     <span>-${product.discount}%</span>
                                 </div>
                             </div>
-                            <img src="${product.image}" class="card-img-top" alt="..." style="height: 304px">
+                            <img src="${product.image}" class="card-img-top" alt="..." style="height: auto">
                         </div>
                         <div class="card-body ps-shoe__content">
                             <div class="ps-shoe__detail">
