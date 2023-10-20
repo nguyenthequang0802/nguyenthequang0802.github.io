@@ -24,7 +24,7 @@ $(document).ready(function(){
         if(shoeSizes && shoeSizes.length > 0) {
             const sizeItems = shoeSizes.map(
                 (size, index) => `
-                <li class="cb">
+                <li class="cb col-xs-6">
                     <input type="radio" class="btn-check" name="options-base" id="option${size}" autocomplete="off" ${index === 0 ? 'checked' : ''}>
                     <label class="btn" for="option${size}">${size}</label>
                 </li> `
@@ -32,6 +32,15 @@ $(document).ready(function(){
             sizeListContainer.html(sizeItems);
         }
     }
+
+    $(document).ready(function() {
+        $(".ps-product__variants .item").click(function() {
+            // Lấy đường dẫn ảnh từ mục đã chọn
+            var imgSrc = $(this).find("img").attr("src");
+            // Đặt đường dẫn ảnh cho ps-product__image
+            $("#product-image").attr("src", imgSrc);
+        });
+    });
 })
 
 $('#reduce').on('click', function(){

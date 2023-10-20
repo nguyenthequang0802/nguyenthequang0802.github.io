@@ -68,7 +68,7 @@ function showCartItems(cartItems) {
         
 
         cartList.append(`
-        <div class="infoCart row">
+        <div class="Cart-item row">
             <div class="image col-3">
                 <a href="">
                     <img src="${image}" alt="">

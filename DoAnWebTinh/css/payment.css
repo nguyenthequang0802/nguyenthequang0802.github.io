@@ -228,3 +228,81 @@ a{
     color: #4b4b4b;
     line-height: 1em;
 }
+
+@media (max-width: 480px) {
+    .main .step-footer button{
+        width: 120px;
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .order-summary-sections .payment-lines {
+        margin-top: 0;
+    }
+
+    .order-summary-section.discount{
+        height: 115px;
+    }
+
+    .fieldset .field div:first-child {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .fieldset .field div:last-child {
+        width: 100%;
+    }
+
+    .main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .sidebar{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .addCodeDiscount {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .main .step-footer button {
+        font-size: 8px;
+    } 
+    
+    #form_discount_add{
+        height: 72px;
+    }
+
+    .fieldset .field div:first-child {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .fieldset .field div:last-child {
+        width: 100%;
+    }
+
+    .order-summary-section.discount{
+        height: 140px;
+    }
+
+    .fieldset .field button {
+        font-size: 12px;
+    }
+
+    .order-summary-sections .payment-lines {
+        margin-top: 0;
+    }
+
+    .total-end .total-line-name span{
+        font-size: 17px;
+    }
+
+    .total-end .price-total-end span{
+        font-size: 20px;
+    }
+}

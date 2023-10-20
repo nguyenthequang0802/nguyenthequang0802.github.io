@@ -790,3 +790,29 @@ a:hover{
         top: 20px;
     }
 }
+
+@media (max-width: 480px) {
+    .navigation__column.left{
+        width: 35%;
+    }
+}
+
+@media (max-width: 320px) {
+    .navigation__column.left {
+        width: 50%;
+    }
+
+    .header .header-top .user-check a {
+        font-size: 11px;
+    }
+
+    .hotline-top a{
+        font-size: 15px;
+    }
+
+    .ps-cart__listing {
+        position: absolute;
+        top: 100%;
+        right: -95px;
+    }
+}
